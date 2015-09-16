@@ -1,0 +1,940 @@
+======================================================================
+Current time is 2/10/2015 5:18:13 PM
+The s19 file is: C:\D\exercisecw10.6\PT60_Bootloader\MC9S08PT60\PT60_Bootloader.abs.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 2/10/2015 5:18:52 PM
+The s19 file is: C:\D\exercisecw10.6\PT60_Bootloader\MC9S08PT60\PT60_Bootloader.abs.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 2/10/2015 5:19:17 PM
+The s19 file is: C:\D\exercisecw10.6\PT60_Bootloader\MC9S08PT60\PT60_Bootloader.abs.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+Terminated!
+======================================================================
+Current time is 2/10/2015 5:20:03 PM
+The s19 file is: C:\D\exercisecw10.6\PT60_Bootloader\MC9S08PT60\PT60_Bootloader.abs.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x003200- 0x010000
+Success!
+======================================================================
+Current time is 2/10/2015 5:20:12 PM
+The s19 file is: C:\D\exercisecw10.6\PT60_Bootloader\MC9S08PT60\PT60_Bootloader.abs.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x003200- 0x010000
+Success!
+======================================================================
+Current time is 2/10/2015 5:20:23 PM
+The s19 file is: C:\D\exercisecw10.6\PT60_Bootloader\MC9S08PT60\PT60_Bootloader.abs.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x003200- 0x010000
+Success!
+======================================================================
+Current time is 7/27/2015 6:11:53 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003A14
+Can't read block at address 0x2000
+Can't erase block at address 0x2000
+Success!
+Terminated!
+======================================================================
+Current time is 7/27/2015 6:15:16 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003A14
+Can't program block at address 0x2040
+Can't erase block at address 0x2000
+Can't erase block at address 0x2000
+Can't erase block at address 0x2000
+Can't erase block at address 0x2000
+Error!
+======================================================================
+Current time is 7/27/2015 6:17:03 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003A14
+Can't program block at address 0x2580
+Success!
+Terminated!
+======================================================================
+Current time is 7/27/2015 6:17:42 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003A14
+Can't program block at address 0x2040
+Can't erase block at address 0x2000
+Can't erase block at address 0x2000
+Can't erase block at address 0x2000
+Can't erase block at address 0x2000
+Error!
+======================================================================
+Current time is 7/27/2015 11:16:04 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 7/28/2015 3:06:04 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x002000- 0x003A14
+Verification failed at address 0x2000, image: 0x00, MCU: 0xFF
+Verification failed at address 0x2000, image: 0x00, MCU: 0xFF
+Verification failed at address 0x2000, image: 0x00, MCU: 0xFF
+Verification failed at address 0x2000, image: 0x00, MCU: 0xFF
+Verification failed at address 0x2000, image: 0x00, MCU: 0xFF
+Error!
+======================================================================
+Current time is 7/28/2015 3:06:58 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003A14
+Success!
+======================================================================
+Current time is 7/28/2015 3:07:37 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootload 20150611\bootloader_user_app_green.s19
+Station 1 is trying to enter Verify mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+Terminated!
+======================================================================
+Current time is 7/28/2015 3:29:56 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/28/2015 3:30:46 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x002000- 0x003AD8
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Error!
+======================================================================
+Current time is 7/28/2015 3:31:04 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x002000- 0x003AD8
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Verification failed at address 0x2440, image: 0x10, MCU: 0x00
+Error!
+======================================================================
+Current time is 7/28/2015 3:41:08 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/28/2015 4:33:01 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/28/2015 6:10:28 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/28/2015 6:11:02 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/28/2015 6:15:11 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/28/2015 6:15:47 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/28/2015 6:16:15 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/30/2015 4:55:10 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/30/2015 4:56:05 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x002000- 0x003AD8
+Success!
+======================================================================
+Current time is 7/30/2015 5:41:02 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/10/2015 5:03:12 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/10/2015 5:03:26 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/10/2015 5:04:37 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:04:58 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:06:53 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:31:13 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:38:26 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:39:48 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:45:34 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:46:26 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_red_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/10/2015 5:47:48 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150728\bootloader_user_app_green_v.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AD8
+Success!
+======================================================================
+Current time is 8/13/2015 5:15:33 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/13/2015 5:17:16 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 6:30:38 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 6:32:06 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 6:33:50 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 6:36:32 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 6:57:29 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/14/2015 6:57:48 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/14/2015 6:58:30 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/14/2015 7:00:20 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:01:41 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:03:47 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:05:28 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:07:45 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:22:44 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:26:05 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:33:44 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:39:10 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:41:16 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/14/2015 7:41:25 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/14/2015 7:44:53 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/14/2015 7:45:18 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x00002000- 0x00003B34
+Success!
+======================================================================
+Current time is 8/25/2015 11:16:10 AM
+The s19 file is: C:\Users\b08277\Desktop\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/25/2015 11:16:38 AM
+The s19 file is: C:\Users\b08277\Desktop\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 1:43:31 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 1:57:51 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 1:58:01 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 2:18:27 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 2:37:58 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 2:42:57 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 2:44:39 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 2:56:15 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 2:57:42 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 2:58:04 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 3:04:47 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 3:06:33 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 3:09:29 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 3:32:13 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 3:46:22 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 4:08:24 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 4:10:49 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 4:29:22 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 4:35:58 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 4:37:52 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 4:58:43 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 5:00:15 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 5:00:20 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 5:01:41 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 5:02:55 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 5:04:27 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 5:24:37 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 5:40:08 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 5:47:30 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:02:06 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:03:22 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:05:52 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:11:47 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:15:28 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:16:53 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:23:05 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:23:27 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:24:40 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 8/27/2015 6:26:59 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:38:46 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:44:02 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 6:44:44 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 6:45:16 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:49:17 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 6:50:03 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:50:37 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 6:51:08 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/27/2015 6:51:33 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Can't program block at address 0x000028C0
+Can't erase block at address 0x00002800
+Can't erase block at address 0x00002800
+Can't erase block at address 0x00002800
+Can't erase block at address 0x00002800
+Error!
+Terminated!
+======================================================================
+Current time is 8/27/2015 6:51:56 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 6:52:02 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Terminated!
+======================================================================
+Current time is 8/27/2015 6:52:22 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/28/2015 2:57:56 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/28/2015 2:58:22 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Can't program block at address 0x00002680
+Can't erase block at address 0x00002410
+Success!
+Terminated!
+======================================================================
+Current time is 8/28/2015 2:59:04 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/28/2015 3:00:25 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/28/2015 3:00:44 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Can't program block at address 0x00002640
+Success!
+Terminated!
+======================================================================
+Current time is 8/28/2015 3:01:06 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 8/28/2015 3:01:25 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/28/2015 3:25:43 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/31/2015 3:38:45 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Terminated!
+======================================================================
+Current time is 8/31/2015 3:39:46 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/31/2015 3:40:07 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Verify mode 
+Verifying Station 1
+verify_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 8/31/2015 3:40:31 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Can't program block at address 0x00002480
+Success!
+Terminated!
+======================================================================
+Current time is 8/31/2015 3:41:05 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+Terminated!
+======================================================================
+Current time is 9/1/2015 1:24:12 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_red.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Success!
+======================================================================
+Current time is 9/1/2015 1:25:15 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\bootload 20150815\bootloader_user_app_green.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003AF8
+Can't program block at address 0x000026C0
+Terminated!
+======================================================================
+Current time is 9/1/2015 1:26:59 PM
+The s19 file is: C:\Users\b08277\Desktop\bootloader_user_app.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00002000- 0x00003B2C
+Success!
