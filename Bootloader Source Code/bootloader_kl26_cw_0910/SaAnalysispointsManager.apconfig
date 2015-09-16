@@ -1,6 +1,6 @@
 <Analysispoints>
 	<Name>AnalysispointsManager</Name>
-	<ProjectPath>C:/Users/b08277/Desktop/bootloader_kl26_cw_2000_0910/bootloader_kl26_cw_2000_0910/SaAnalysispointsManager.apconfig</ProjectPath>
+	<ProjectPath>C:/Users/b08277/Desktop/Bootload project/Bootloader20150910/bootloader_kl26_cw_0910/SaAnalysispointsManager.apconfig</ProjectPath>
 	<MaxNumberOfCores>1</MaxNumberOfCores>
 	<Comments>Analysispoints Manager</Comments>
 	<IgnoreAll>false</IgnoreAll>
