@@ -5,3 +5,8 @@ user_app_green_blink.s19 - user application burining file for FRDM-KL26 board, b
 user_app_red_blink.s19 - user application burining file for FRDM-KL26 board, blinking red led
 Video Show - GUI working demenstration 
 
+how to generate s19 file by CW:
+http://mcuoneclipse.com/2012/09/13/s-record-generation-with-gcc-for-armkinetis/
+
+
+the default CW generated srecord file extension is .hex, user can manually change it from .hex to .s19
