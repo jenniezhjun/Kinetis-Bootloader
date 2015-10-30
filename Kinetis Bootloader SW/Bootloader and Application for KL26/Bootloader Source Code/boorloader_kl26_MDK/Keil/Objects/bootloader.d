@@ -1,0 +1,12 @@
+.\objects\bootloader.o: ..\Sources\bootloader.c
+.\objects\bootloader.o: ..\Common\MKL26Z4.h
+.\objects\bootloader.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bootloader.o: ..\Common\core_cm0plus.h
+.\objects\bootloader.o: ..\Common\core_cmInstr.h
+.\objects\bootloader.o: ..\Common\core_cmFunc.h
+.\objects\bootloader.o: ..\Common\system_MKL26Z4.h
+.\objects\bootloader.o: ..\Sources\bootloader.h
+.\objects\bootloader.o: ..\Driver\rs232\rs232.h
+.\objects\bootloader.o: ..\Driver\bootcfg\FRDM_KL26Z_cfg.h
+.\objects\bootloader.o: ..\Common\MKL26Z4.h
+.\objects\bootloader.o: ..\Driver\flash\flash_kinetis.h

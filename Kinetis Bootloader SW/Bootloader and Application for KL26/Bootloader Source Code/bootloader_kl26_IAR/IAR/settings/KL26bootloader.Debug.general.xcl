@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armpemicro.dll" 
+
+"C:\Users\B55335\Desktop\Kinetis-Bootloader-master\Kinetis Bootloader SW\Bootloader and Application for KL26\Bootloader Source Code\bootloader_kl26_IAR\IAR\Debug\Exe\KL26bootloader.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\bin\armbat.dll" 
+
+--device_macro "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\debugger\Freescale\KLxx.dmac" 
+
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\flashloader\Freescale\FlashKLxx128K.board" 
+
+
+
+
