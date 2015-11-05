@@ -15,7 +15,7 @@
 
 const Byte str_app_ok[8]	= "APP_OK";
 const Byte Identifier[20]	= "MK22FN512";
-
+const Byte station_number = 1;
 typedef union Address
  {
    unsigned long complete;
@@ -290,9 +290,9 @@ int main(void)
 	      frame_start_flag = 0;
 	   }
 
-	   if((sci_buffer[frame_length-2] == 0xAA) && (sci_buffer[frame_length-1] == 0x55)) //Check if Frame end is correct
+	   if((sci_buffer[1] == station_number ) && (sci_buffer[frame_length-2] == 0xAA) && (sci_buffer[frame_length-1] == 0x55)) //Check if Frame end is correct
 	   {
-	       data_checked = 1; //  Correct frame received.
+	       data_checked = 1; //  Correct frame with its own station number  received.
 	   }
 
 	   // all the data in frame was correctly received (data_checked = 1) above, now perform frame analysis below.

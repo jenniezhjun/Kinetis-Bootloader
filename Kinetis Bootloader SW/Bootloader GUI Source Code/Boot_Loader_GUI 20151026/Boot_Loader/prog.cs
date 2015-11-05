@@ -641,7 +641,6 @@ namespace Boot_Code
 
 	        // issue command
 	                    
-           // if ((MyVar.ident.bl_version == MyVar.BL_HCS08_LARGE) || (MyVar.ident.bl_version == MyVar.BL_HCS08_LONG))
             if ((MyVar.ident.bl_version == MyVar.BL_M0) || (MyVar.ident.bl_version == MyVar.BL_M4))
             {
                 cmd_buffer[0] = (byte)'$';
@@ -699,7 +698,6 @@ namespace Boot_Code
 
 	        // issue command
 	      
-	       // if ((bl_version == BL_HCS08_LARGE) || (bl_version == BL_HCS08_LONG))
             if ((MyVar.ident.bl_version == MyVar.BL_M0) || (MyVar.ident.bl_version == MyVar.BL_M4))
             {
                 cmd_buffer[0] = (byte)'$';

@@ -1,53 +1,0 @@
-Dependencies for Project 'KL26bootloader', Target 'KL26bootloader': (DO NOT MODIFY !)
-F (..\Common\core_cm0plus.h)(0x56270E22)()
-F (..\Common\core_cm4.h)(0x5617C8C2)()
-F (..\Common\core_cm4_simd.h)(0x5617C8C2)()
-F (..\Common\core_cm7.h)(0x5617C8C2)()
-F (..\Common\core_cmFunc.h)(0x56271B66)()
-F (..\Common\core_cmInstr.h)(0x56271B4D)()
-F (..\Common\core_cmSimd.h)(0x5617C8C2)()
-F (..\Common\MKL26Z4.h)(0x56270E00)()
-F (..\Common\system_MKL26Z4.h)(0x56271B8C)()
-F (..\Common\bootloader_asm.s)(0x562757E5)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Freescale\Kinetis--pd "__UVISION_VERSION SETA 515"--list .\listings\bootloader_asm.lst --xref -o .\objects\bootloader_asm.o --depend .\objects\bootloader_asm.d)
-F (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56271BC9)()
-F (..\Driver\flash\flash_kinetis.c)(0x56271B66)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Freescale\Kinetis-D__UVISION_VERSION="515"-o .\objects\flash_kinetis.o --omf_browse .\objects\flash_kinetis.crf --depend .\objects\flash_kinetis.d)
-I (..\Driver\flash\flash_kinetis.h)(0x56271B77)
-I (..\Sources\bootloader.h)(0x562754A1)
-I (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56271BC9)
-I (..\Common\MKL26Z4.h)(0x56270E00)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
-I (..\Common\core_cm0plus.h)(0x56270E22)
-I (..\Common\core_cmInstr.h)(0x56271B4D)
-I (..\Common\core_cmFunc.h)(0x56271B66)
-I (..\Common\system_MKL26Z4.h)(0x56271B8C)
-F (..\Driver\flash\flash_kinetis.h)(0x56271B77)()
-F (..\Driver\rs232\rs232.c)(0x56271B66)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Freescale\Kinetis-D__UVISION_VERSION="515"-o .\objects\rs232.o --omf_browse .\objects\rs232.crf --depend .\objects\rs232.d)
-I (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56271BC9)
-I (..\Common\MKL26Z4.h)(0x56270E00)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
-I (..\Common\core_cm0plus.h)(0x56270E22)
-I (..\Common\core_cmInstr.h)(0x56271B4D)
-I (..\Common\core_cmFunc.h)(0x56271B66)
-I (..\Common\system_MKL26Z4.h)(0x56271B8C)
-I (..\Driver\rs232\rs232.h)(0x56271BA6)
-F (..\Driver\rs232\rs232.h)(0x56271BA6)()
-F (..\Sources\bootloader.c)(0x5627595E)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Freescale\Kinetis-D__UVISION_VERSION="515"-o .\objects\bootloader.o --omf_browse .\objects\bootloader.crf --depend .\objects\bootloader.d)
-I (..\Common\MKL26Z4.h)(0x56270E00)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
-I (..\Common\core_cm0plus.h)(0x56270E22)
-I (..\Common\core_cmInstr.h)(0x56271B4D)
-I (..\Common\core_cmFunc.h)(0x56271B66)
-I (..\Common\system_MKL26Z4.h)(0x56271B8C)
-I (..\Sources\bootloader.h)(0x562754A1)
-I (..\Driver\rs232\rs232.h)(0x56271BA6)
-I (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56271BC9)
-I (..\Driver\flash\flash_kinetis.h)(0x56271B77)
-F (..\Sources\bootloader.h)(0x562754A1)()
-F (..\Startup_Code\startup_MKL26Z4.S)(0x562752E6)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Freescale\Kinetis--pd "__UVISION_VERSION SETA 515"--list .\listings\startup_mkl26z4.lst --xref -o .\objects\startup_mkl26z4.o --depend .\objects\startup_mkl26z4.d)
-F (..\Startup_Code\system_MKL26Z4.c)(0x56270DAD)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Freescale\Kinetis-D__UVISION_VERSION="515"-o .\objects\system_mkl26z4.o --omf_browse .\objects\system_mkl26z4.crf --depend .\objects\system_mkl26z4.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
-I (..\Common\MKL26Z4.h)(0x56270E00)
-I (..\Common\core_cm0plus.h)(0x56270E22)
-I (..\Common\core_cmInstr.h)(0x56271B4D)
-I (..\Common\core_cmFunc.h)(0x56271B66)
-I (..\Common\system_MKL26Z4.h)(0x56271B8C)

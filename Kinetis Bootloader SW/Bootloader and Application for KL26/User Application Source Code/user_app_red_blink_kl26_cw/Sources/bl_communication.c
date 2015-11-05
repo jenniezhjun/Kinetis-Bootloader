@@ -7,8 +7,8 @@
 Byte sci_buffer[8] = {0};  // save the information PC send
 Byte frame_length = 0xFF;  // SCI received frame length, initialized as 0xFF
 Byte data_length = 0;	
+const Byte station_number = 0x01;
 
-#define STATION_NUM   0x01  // satation number 
 // reset system
 #define NVIC_SystemReset()      SCB_AIRCR = SCB_AIRCR_VECTKEY(0x5FA)|\
 											SCB_AIRCR_SYSRESETREQ_MASK;
@@ -66,10 +66,6 @@ void UpdateAPP()
 	if(frame_start_flag == 1)
 	{
 		sci_buffer[1] = UART_GetChar();     // sci_buffer[1] is the station number
-		if(sci_buffer[1] != STATION_NUM)    // if not the STATION_NUM, continue the APP, do not update 
-		{
-			return;		
-		}
 		UART_GetChar();   					// sci_buffer[2] is reserved
 		sci_buffer[3] = UART_GetChar();     // sci_buffer[3] is the Data length
 		data_length = sci_buffer[3];
@@ -81,9 +77,9 @@ void UpdateAPP()
 		sci_buffer[buff_index ++] = UART_GetChar();  // frame end. It should be 0x55
 		frame_start_flag = 0;
 	}	
-	if((sci_buffer[frame_length-2] == 0xAA) && (sci_buffer[frame_length-1] == 0x55))
+	if((sci_buffer[1] == station_number ) && (sci_buffer[frame_length-2] == 0xAA) && (sci_buffer[frame_length-1] == 0x55))
 	{
-		data_checked = 1; //  Correct frame received. 
+		data_checked = 1; //  Correct frame with its own station number is received. 
 	}
 	//all the data in frame was correctly received (data_checked = 1) above, now perform frame analysis below.
 	if(data_checked == 1)

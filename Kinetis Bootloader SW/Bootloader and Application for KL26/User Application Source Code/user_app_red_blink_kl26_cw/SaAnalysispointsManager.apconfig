@@ -1,6 +1,6 @@
 <Analysispoints>
 	<Name>AnalysispointsManager</Name>
-	<ProjectPath>C:/Users/b08277/Desktop/Bootloader20150907/user_app_red_blink/SaAnalysispointsManager.apconfig</ProjectPath>
+	<ProjectPath>C:/Users/b08277/Desktop/Bootload project/Bootloader20151102/Kinetis Bootloader SW/Bootloader and Application for KL26/User Application Source Code/user_app_red_blink_kl26_cw/SaAnalysispointsManager.apconfig</ProjectPath>
 	<MaxNumberOfCores>1</MaxNumberOfCores>
 	<Comments>Analysispoints Manager</Comments>
 	<IgnoreAll>false</IgnoreAll>

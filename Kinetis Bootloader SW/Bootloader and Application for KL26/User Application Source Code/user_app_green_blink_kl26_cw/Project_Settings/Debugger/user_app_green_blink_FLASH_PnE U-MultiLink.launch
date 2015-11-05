@@ -186,7 +186,7 @@
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_USE_CYCLONEPRO_RELAYS" value="0"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_USE_SWD" value="1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_interface_selection" value="1"/>
-<stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.UUID" value="3491cdb6-4e27-48a8-b340-6032288bbe35"/>
+<stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.UUID" value="0bcf80c9-fbb8-43c8-a851-2eb6cd57e3d3"/>
 <booleanAttribute key="forceShellDownload" value="false"/>
 <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.arm.ArmDebugger"/>

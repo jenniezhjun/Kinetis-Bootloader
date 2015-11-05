@@ -124,3 +124,12 @@ C:\Users\b08277\Desktop\Bootloader20150918\Boot_Loader_GUI 20150918\Boot_Loader\
 C:\Users\b08277\Desktop\Bootloader20150918\Boot_Loader_GUI 20150918\Boot_Loader\obj\Debug\Boot_Code.Form1.resources
 C:\Users\b08277\Desktop\Bootloader20150918\Boot_Loader_GUI 20150918\Boot_Loader\obj\Debug\Boot_Loader.Properties.Resources.resources
 C:\Users\b08277\Desktop\Bootloader20150918\Boot_Loader_GUI 20150918\Boot_Loader\obj\Debug\Boot_Loader.csproj.GenerateResource.Cache
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\obj\Debug\Boot_Loader.exe
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\obj\Debug\Boot_Loader.pdb
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\bin\Debug\Boot_Loader.exe
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\bin\Debug\Boot_Loader.pdb
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\obj\Debug\Boot_Loader.csprojResolveAssemblyReference.cache
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\obj\Debug\Boot_Code.Form1.resources
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\obj\Debug\Boot_Loader.Form2.resources
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\obj\Debug\Boot_Loader.Properties.Resources.resources
+C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader GUI Source Code\Boot_Loader_GUI 20151026\Boot_Loader\obj\Debug\Boot_Loader.csproj.GenerateResource.Cache

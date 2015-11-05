@@ -8,7 +8,7 @@
 #include "core_cm4.h"
 
 /**************************************************/
-#define RELOCATED_VECTORS          0x2000                            // Start address of relocated interrutp vector table
+#define RELOCATED_VECTORS          0x4000                            // Start address of relocated interrutp vector table
 #define AppIDC                     *((LWord*)(0x20010000 - 8))
 #define APPOK_START_ADDRESS		   0x7FFF8
 

@@ -40,4 +40,9 @@ how to generate s19 file by CW:
 http://mcuoneclipse.com/2012/09/13/s-record-generation-with-gcc-for-armkinetis/
 
 
-the default CW generated srecord file extension is .hex, user can manually change it from .hex to .s19
+the default CW generated srecord file extension is .hex, user can manually change it from .hex to .s19/.bin
+
+if user need burning serial number with bootloader, refer solution from P&E:
+https://www.pemicro.com/newsletter/experts_corner/2005_08_17/serialize.cfm
+
+

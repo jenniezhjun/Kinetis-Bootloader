@@ -1379,3 +1379,10 @@ Error 1 times!
 Programming Station 1
 prg_area: 0x00001000- 0x000027AC
 Success!
+======================================================================
+Current time is 11/2/2015 2:51:16 PM
+The s19 file is: C:\Users\b08277\Desktop\Bootload project\Bootloader20151102\Kinetis Bootloader SW\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink_kl26.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x000027C0
+Success!

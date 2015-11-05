@@ -187,7 +187,7 @@
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_USE_CYCLONEPRO_RELAYS" value="0"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_USE_SWD" value="1"/>
 <stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.STARTUP_interface_selection" value="7"/>
-<stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.UUID" value="d656bd41-dd61-4407-9075-c488f6260fbd"/>
+<stringAttribute key="com.pemicro.mcu.debug.connections.pne.arm.UUID" value="d3908954-a41d-4c33-ada9-88208d891ddf"/>
 <booleanAttribute key="forceShellDownload" value="false"/>
 <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.freescale.cdt.debug.cw.arm.ArmDebugger"/>
@@ -198,7 +198,7 @@
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_REGISTER_BOOKKEEPING" value="false"/>
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_RESTORE_WATCHPOINTS" value="true"/>
 <booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
-<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList&gt;&lt;content id=&quot;[1]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[2]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[3]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[5]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[6]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[4]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;/contentList&gt;"/>
+<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList&gt;&lt;content id=&quot;[4]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[6]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[5]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[3]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[2]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;[1]-sci_buffer--(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;station_number-UpdateAPP-(format)&quot; val=&quot;4&quot;/&gt;&lt;/contentList&gt;"/>
 <stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;globalVariableList&gt;&#13;&#10;&lt;globalVariable name=&quot;sci_buffer&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;globalVariable name=&quot;sci_buffer&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;globalVariable name=&quot;sci_buffer&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;globalVariable name=&quot;sci_buffer&quot; path=&quot;&quot;/&gt;&#13;&#10;&lt;/globalVariableList&gt;&#13;&#10;"/>
 <stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;memoryBlockExpressionList/&gt;&#13;&#10;"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="FLASH/user_app_green_blink.elf"/>
