@@ -306,11 +306,11 @@ __isr_vector:
     .size    __isr_vector, . - __isr_vector
 
 /* Flash Configuration */
-    .section .FlashConfig, "a"
-    .long 0xFFFFFFFF
-    .long 0xFFFFFFFF
-    .long 0xFFFFFFFF
-    .long 0xFFFFFFFE
+  //  .section .FlashConfig, "a"
+  //  .long 0xFFFFFFFF
+  //  .long 0xFFFFFFFF
+ //   .long 0xFFFFFFFF
+  //  .long 0xFFFFFFFE
 
     .text
     .thumb

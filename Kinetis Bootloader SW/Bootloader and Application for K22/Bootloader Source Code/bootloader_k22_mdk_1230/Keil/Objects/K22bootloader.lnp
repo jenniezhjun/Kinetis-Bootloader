@@ -1,0 +1,11 @@
+--cpu Cortex-M4.fp
+".\objects\bootloader_asm.o"
+".\objects\flash_kinetis.o"
+".\objects\rs232.o"
+".\objects\bootloader.o"
+".\objects\startup_mk22f51212.o"
+".\objects\system_mk22f51212.o"
+--strict --scatter ".\Objects\K22bootloader.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\K22bootloader.map" -o .\Objects\K22bootloader.axf

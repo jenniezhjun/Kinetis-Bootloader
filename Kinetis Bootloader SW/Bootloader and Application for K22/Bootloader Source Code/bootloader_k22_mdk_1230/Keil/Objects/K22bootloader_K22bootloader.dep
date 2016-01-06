@@ -1,0 +1,56 @@
+Dependencies for Project 'K22bootloader', Target 'K22bootloader': (DO NOT MODIFY !)
+F (..\Common\core_cm4.h)(0x5617C8C2)()
+F (..\Common\core_cm4_simd.h)(0x5617C8C2)()
+F (..\Common\core_cmFunc.h)(0x5617C8C2)()
+F (..\Common\core_cmInstr.h)(0x5617C8C2)()
+F (..\Common\core_cmSimd.h)(0x5617C8C2)()
+F (..\Common\MK22F51212.h)(0x5617C8C2)()
+F (..\Common\system_MK22F51212.h)(0x56614B1C)()
+F (..\Common\bootloader_asm.s)(0x562757E6)(--cpu Cortex-M4.fp -g --apcs=interwork -I "F:\Kbootloader\Bootloader and Application for K22\Bootloader Source Code\bootloaderMDK1211\Keil\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.3.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 515" --pd "MK22FN512xxx12 SETA 1"--list .\listings\bootloader_asm.lst --xref -o .\objects\bootloader_asm.o --depend .\objects\bootloader_asm.d)
+F (..\Driver\bootcfg\FRDM_K22F_cfg.h)(0x568231C6)()
+F (..\Driver\flash\flash_kinetis.c)(0x5617C8C2)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\Keil-I "F:\Kbootloader\Bootloader and Application for K22\Bootloader Source Code\bootloaderMDK1211\Keil\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.3.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DMK22FN512xxx12-o .\objects\flash_kinetis.o --omf_browse .\objects\flash_kinetis.crf --depend .\objects\flash_kinetis.d)
+I (..\Sources\bootloader.h)(0x56614B1C)
+I (..\Driver\flash\flash_kinetis.h)(0x5617C8C2)
+I (..\Driver\bootcfg\FRDM_K22F_cfg.h)(0x568231C6)
+I (..\Common\MK22F51212.h)(0x5617C8C2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (..\Common\core_cm4.h)(0x5617C8C2)
+I (..\Common\core_cmInstr.h)(0x5617C8C2)
+I (..\Common\core_cmFunc.h)(0x5617C8C2)
+I (..\Common\core_cmSimd.h)(0x5617C8C2)
+I (..\Common\system_MK22F51212.h)(0x56614B1C)
+F (..\Driver\flash\flash_kinetis.h)(0x5617C8C2)()
+F (..\Driver\rs232\rs232.c)(0x56614B1C)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\Keil-I "F:\Kbootloader\Bootloader and Application for K22\Bootloader Source Code\bootloaderMDK1211\Keil\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.3.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DMK22FN512xxx12-o .\objects\rs232.o --omf_browse .\objects\rs232.crf --depend .\objects\rs232.d)
+I (..\Driver\bootcfg\FRDM_K22F_cfg.h)(0x568231C6)
+I (..\Common\MK22F51212.h)(0x5617C8C2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (..\Common\core_cm4.h)(0x5617C8C2)
+I (..\Common\core_cmInstr.h)(0x5617C8C2)
+I (..\Common\core_cmFunc.h)(0x5617C8C2)
+I (..\Common\core_cmSimd.h)(0x5617C8C2)
+I (..\Common\system_MK22F51212.h)(0x56614B1C)
+I (..\Driver\rs232\rs232.h)(0x5617C8C2)
+I (..\Sources\bootloader.h)(0x56614B1C)
+F (..\Driver\rs232\rs232.h)(0x5617C8C2)()
+F (..\Sources\bootloader.c)(0x566A8EFC)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\Keil-I "F:\Kbootloader\Bootloader and Application for K22\Bootloader Source Code\bootloaderMDK1211\Keil\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.3.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DMK22FN512xxx12-o .\objects\bootloader.o --omf_browse .\objects\bootloader.crf --depend .\objects\bootloader.d)
+I (..\Common\MK22F51212.h)(0x5617C8C2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (..\Common\core_cm4.h)(0x5617C8C2)
+I (..\Common\core_cmInstr.h)(0x5617C8C2)
+I (..\Common\core_cmFunc.h)(0x5617C8C2)
+I (..\Common\core_cmSimd.h)(0x5617C8C2)
+I (..\Common\system_MK22F51212.h)(0x56614B1C)
+I (..\Sources\bootloader.h)(0x56614B1C)
+I (..\Driver\rs232\rs232.h)(0x5617C8C2)
+I (..\Driver\flash\flash_kinetis.h)(0x5617C8C2)
+I (..\Driver\bootcfg\FRDM_K22F_cfg.h)(0x568231C6)
+F (..\Sources\bootloader.h)(0x56614B1C)()
+F (..\Startup_Code\startup_MK22F51212.S)(0x5661272C)(--cpu Cortex-M4.fp -g --apcs=interwork -I "F:\Kbootloader\Bootloader and Application for K22\Bootloader Source Code\bootloaderMDK1211\Keil\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.3.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 515" --pd "MK22FN512xxx12 SETA 1"--list .\listings\startup_mk22f51212.lst --xref -o .\objects\startup_mk22f51212.o --depend .\objects\startup_mk22f51212.d)
+F (..\Startup_Code\system_MK22F51212.c)(0x56614B1C)(-c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\Keil-I "F:\Kbootloader\Bootloader and Application for K22\Bootloader Source Code\bootloaderMDK1211\Keil\RTE"-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.3.0\Device\Include-I C:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DMK22FN512xxx12-o .\objects\system_mk22f51212.o --omf_browse .\objects\system_mk22f51212.crf --depend .\objects\system_mk22f51212.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C245B8)
+I (..\Common\MK22F51212.h)(0x5617C8C2)
+I (..\Common\core_cm4.h)(0x5617C8C2)
+I (..\Common\core_cmInstr.h)(0x5617C8C2)
+I (..\Common\core_cmFunc.h)(0x5617C8C2)
+I (..\Common\core_cmSimd.h)(0x5617C8C2)
+I (..\Common\system_MK22F51212.h)(0x56614B1C)

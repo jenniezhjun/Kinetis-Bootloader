@@ -1,0 +1,7 @@
+C:\Users\b08277\Desktop\Boot_Loader_GUI 20151230\Boot_Loader\bin\Release\Boot_Loader.exe
+C:\Users\b08277\Desktop\Boot_Loader_GUI 20151230\Boot_Loader\bin\Release\Boot_Loader.pdb
+C:\Users\b08277\Desktop\Boot_Loader_GUI 20151230\Boot_Loader\obj\Release\Boot_Code.Form1.resources
+C:\Users\b08277\Desktop\Boot_Loader_GUI 20151230\Boot_Loader\obj\Release\Boot_Loader.Properties.Resources.resources
+C:\Users\b08277\Desktop\Boot_Loader_GUI 20151230\Boot_Loader\obj\Release\Boot_Loader.csproj.GenerateResource.Cache
+C:\Users\b08277\Desktop\Boot_Loader_GUI 20151230\Boot_Loader\obj\Release\Boot_Loader.exe
+C:\Users\b08277\Desktop\Boot_Loader_GUI 20151230\Boot_Loader\obj\Release\Boot_Loader.pdb

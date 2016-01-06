@@ -469,11 +469,6 @@ typedef struct
        uint32_t RESERVED0[5];
   __IO uint32_t CPACR;                   /*!< Offset: 0x088 (R/W)  Coprocessor Access Control Register                   */
 } SCB_Type;
-/*Add by user for SCB */
-typedef SCB_Type  *SCB_MemMapPtr;
-#define SystemControl_BASE_PTR                   ((SCB_MemMapPtr)0xE000ED00u)
-#define SCB_VTOR_REG(base)                       ((base)->VTOR)
-#define SCB_VTOR                                 SCB_VTOR_REG(SystemControl_BASE_PTR)
 
 /* SCB CPUID Register Definitions */
 #define SCB_CPUID_IMPLEMENTER_Pos          24                                             /*!< SCB CPUID: IMPLEMENTER Position */

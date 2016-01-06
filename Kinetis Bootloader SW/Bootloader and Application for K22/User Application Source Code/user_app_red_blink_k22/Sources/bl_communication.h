@@ -8,6 +8,8 @@
 #ifndef UPDATEAPP_H_
 #define UPDATEAPP_H_
 
+
+
 typedef unsigned char   	Byte;  		//1 byte
 typedef unsigned short  	Word;  		//2 byte
 typedef unsigned int	   	LWord; 		//4 byte
@@ -21,8 +23,7 @@ typedef unsigned long long 	DLWord; 	//8 Byte
 #define INIT_CLOCKS_TO_MODULES    SIM_SCGC4 |= SIM_SCGC4_UART1_MASK ; \
                                   SIM_SCGC5 |= 0xffffffff; \
                                   SIM_SCGC6 |= SIM_SCGC6_FTF_MASK;
-#define PIN_INIT_AS_UART	PORT_PCR_REG(PORTA_BASE_PTR, 1) = PORT_PCR_MUX(2);\
-							PORT_PCR_REG(PORTA_BASE_PTR, 2) = PORT_PCR_MUX(2);		  
+
 							 
 #define UART_IsChar() (UART_S1_REG(UART1_BASE_PTR) & UART_S1_RDRF_MASK)
 #define PIN_INIT_AS_UART	PORT_PCR_REG(PORTE_BASE_PTR, 1) = PORT_PCR_MUX(3);\
@@ -39,5 +40,8 @@ void UpdateAPP();
 #define EnableInterrupts __asm(" CPSIE i");
 #define DisableInterrupts __asm(" CPSID i");
 extern unsigned int AppIDC;
+extern Byte sci_buffer[];
+extern Byte get_uart;
+extern Byte buff_index;
 //
 #endif /* UPDATEAPP_H_ */

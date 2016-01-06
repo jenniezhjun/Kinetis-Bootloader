@@ -18,14 +18,14 @@
                                          SIM_SCGC5_PORTE_MASK   
 // init PTE31 to gpio 
 #define APP_LED_INIT         PORTE_PCR31 = PORT_PCR_MUX(0x1); \
-						     GPIOE_PDDR = 0x080000000; \
-                             GPIOE_PCOR = 0x080000000 
-
+							 GPIOE_PDDR = 0x080000000; \
+							 GPIOE_PCOR = 0x080000000 
+Byte buff_index = 0;   	   // receive buffer index for sci_buffer[]
 void enable_irq (Word irq);
 void init_PIT(void);
 void flash_protect();
-
-//__attribute__((section(".appIndicator"))) LWord AppIDC; //-- need add to APP of uers - 1
+void UART0_IRQHandler();
+//__attribute__((section(".appIndicator"))) LWord AppIDC; //-- need add to APP of uers - 1 
 
 int main(void)
 {   	
@@ -35,16 +35,21 @@ int main(void)
 	
 	flash_protect();           // protect the entire flash 
 	
-	INIT_CLOCKS_TO_MODULES;    // init clock module	-- need add to APP of uers - 2 
-	UART_Initialization();     // init UART module -- need add to APP of uers - 3 
-
+	INIT_CLOCKS_TO_MODULES;    // init clock module	-- need add to APP of uers - 2
+	UART_Initialization();     // init UART module -- need add to APP of uers  - 3 
+	enable_irq(12);            // enable UART0 interrupt -- need add to APP of uers  - 4 
+	
 	APP_LED_INIT;      
 	init_PIT();				   // init timer 
 	enable_irq(22);            // enable timer interrupt 
 
 	while(1)
 	{
-		UpdateAPP();         // update user's application -- need add to the app of user's - 4
+		 if(buff_index==7)
+				{
+				   buff_index = 0;
+				   UpdateAPP();  // update user's application -- need add to the app of user's
+				}
 	}
 }
 
@@ -81,7 +86,19 @@ void PIT_IRQHandler()
 	PIT_TFLG1=0x01;
 	PIT_TCTRL1; //dummy read the PIT1 control reg to enable another interput
 }
-
+//-----------------------------------------------------------------------------
+// FUNCTION:   UART_IRQHandler
+// SCOPE:       Applicaiton function
+// DESCRIPTION: UART interrupt
+//
+// PARAMETERS:  none
+//
+// RETURNS:     none
+//-----------------------------------------------------------------------------
+void UART0_IRQHandler()
+{
+	 sci_buffer[buff_index++] = UART_D_REG(UART0_BASE_PTR);
+}
 //-----------------------------------------------------------------------------
 // FUNCTION:    enable_irq
 // SCOPE:       Applicaiton function
@@ -123,4 +140,5 @@ void flash_protect()
 	FTFA_FPROT1 = 0x00;
 	FTFA_FPROT2 = 0x00;
 	FTFA_FPROT3 = 0x00;
+
 }

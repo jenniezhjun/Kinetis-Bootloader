@@ -7,6 +7,8 @@
 #include "derivative.h" /* include peripheral declarations */
 #include "bl_communication.h"
 
+__attribute__((section(".cfmconfig")))const Byte str_app_ok[8]	= "APP_OK";  //fill this field with "APP_OK", indicate app is successfully programmed
+
 #define EnableInterrupts  asm(" CPSIE i");
 #define DisableInterrupts asm(" CPSID i");
 
@@ -20,12 +22,11 @@
 #define APP_LED_INIT         PORTE_PCR29 = PORT_PCR_MUX(0x1); \
 							 GPIOE_PDDR = 0x020000000; \
 							 GPIOE_PCOR = 0x020000000 
-
+Byte buff_index = 0;   	   // receive buffer index for sci_buffer[]
 void enable_irq (Word irq);
 void init_PIT(void);
 void flash_protect();
-
-__attribute__((section(".appIndicator"))) LWord AppIDC; //-- need add to APP of uers - 1 
+void UART0_IRQHandler();
 
 int main(void)
 {   	
@@ -35,16 +36,21 @@ int main(void)
 	
 	flash_protect();           // protect the entire flash 
 	
-	INIT_CLOCKS_TO_MODULES;    // init clock module	-- need add to APP of uers - 2 
-	UART_Initialization();     // init UART module -- need add to APP of uers - 3 
-
+	INIT_CLOCKS_TO_MODULES;    // init clock module	-- need add to APP of uers 
+	UART_Initialization();     // init UART module -- need add to APP of uers   
+	enable_irq(12);            // enable UART0 interrupt -- need add to APP of uers  
+	
 	APP_LED_INIT;      
 	init_PIT();				   // init timer 
 	enable_irq(22);            // enable timer interrupt 
 
 	while(1)
 	{
-		UpdateAPP();         // update user's application -- need add to the app of user's - 4
+		 if(buff_index==7)
+		 {
+			buff_index = 0;
+		    UpdateAPP();  // update user's application -- need add to the app of user's
+		}
 	}
 }
 

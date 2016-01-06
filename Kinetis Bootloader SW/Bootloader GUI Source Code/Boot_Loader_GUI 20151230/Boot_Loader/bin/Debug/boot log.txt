@@ -1,0 +1,84 @@
+======================================================================
+Current time is 12/30/2015 10:48:12
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.bin
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B05
+Success!
+======================================================================
+Current time is 12/30/2015 10:49:21
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.bin
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B05
+Success!
+======================================================================
+Current time is 12/30/2015 10:50:11
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.bin
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B05
+Success!
+======================================================================
+Current time is 12/30/2015 10:51:00
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:51:23
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_red_blink.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002A84
+Success!
+======================================================================
+Current time is 12/30/2015 10:52:15
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:52:48
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:54:39
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:55:35
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:56:11
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:58:43
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:59:13
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!

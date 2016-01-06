@@ -7,20 +7,20 @@
 Byte sci_buffer[8] = {0};  // save the information PC send
 Byte frame_length = 0xFF;  // SCI received frame length, initialized as 0xFF
 Byte data_length = 0;	
-const Byte station_number = 0x01;
 
+//#define STATION_NUM   0x01  // satation number 
 // reset system
 #define NVIC_SystemReset()      SCB_AIRCR = SCB_AIRCR_VECTKEY(0x5FA)|\
 											SCB_AIRCR_SYSRESETREQ_MASK;
 
-#define AppIDC *(LWord *)(0x20003000 - 8)							
+#define AppIDC *(LWord *)(0x20003000 - 8)		
+const Byte station_number = 1;
 /**************************************************************//*!
 * UART Initialization  
 ******************************************************************/
 void UART_Initialization(void)
 {
 	PIN_INIT_AS_UART; 
-	
 	UART_BDH_REG(UART0_BASE_PTR)     = ((UART_SBR>>8)&0x1f);
 	UART_BDL_REG(UART0_BASE_PTR)     = (UART_SBR&0xff);
 							   
@@ -28,58 +28,21 @@ void UART_Initialization(void)
 	UART_C4_REG(UART0_BASE_PTR)      = (UART_BRFA&0x1f);  
 	#endif
 	UART_C2_REG(UART0_BASE_PTR)      = UART_C2_TE_MASK|UART_C2_RE_MASK;
-
-	while(UART_IsChar())
-		(void)UART_GetChar();
-}
-/**************************************************************//*!
-* Function for receiving of one character  
-******************************************************************/
-Byte UART_GetChar(void)
-{
-  Byte ret = 0;
-  while(UART_IsChar() == 0){
-		};
-  ret = UART_D_REG(UART0_BASE_PTR);
-  return ret;
-}
-/**************************************************************//*!
-* Function for sending one character   
-******************************************************************/
-void UART_PutChar(Byte data)
-{
-  while((UART_S1_REG(UART0_BASE_PTR)&UART_S1_TC_MASK) == 0){};
-  UART_D_REG(UART0_BASE_PTR) = data;
+	UART0_C2 |= 0x20;    // Enable UART receiver interrupt
 }
 
 void UpdateAPP()
 {
-	Byte frame_start_flag  = 0;  // if frame header is received. 1: receive $, start to receive frame;  0: no $ received 	
+	
 	Byte data_checked = 0;  // check frame end 0xAA 0x55. 1: correct frame ; 0: wrong frame
-	Byte buff_index = 1;   	   // receive buffer index for sci_buffer[]
 
-	sci_buffer[0] = UART_GetChar();
 	if( sci_buffer[0] == '$') 			//check frame header: whether it is '$'
 	{
-		frame_start_flag  = 1;
-	}   	 
-	if(frame_start_flag == 1)
-	{
-		sci_buffer[1] = UART_GetChar();     // sci_buffer[1] is the station number
-		UART_GetChar();   					// sci_buffer[2] is reserved
-		sci_buffer[3] = UART_GetChar();     // sci_buffer[3] is the Data length
-		data_length = sci_buffer[3];
 		frame_length = 4 + sci_buffer[3] + 2;  // frame_length = frame head + data + frame end 
-		buff_index = 4;
-		while(data_length --)
-			sci_buffer[buff_index ++] = UART_GetChar();
-		sci_buffer[buff_index ++] = UART_GetChar();  // frame end. It should be 0xAA
-		sci_buffer[buff_index ++] = UART_GetChar();  // frame end. It should be 0x55
-		frame_start_flag = 0;
-	}	
-	if((sci_buffer[1] == station_number ) && (sci_buffer[frame_length-2] == 0xAA) && (sci_buffer[frame_length-1] == 0x55))
+	}   	 
+	if((sci_buffer[1] == station_number )&& (sci_buffer[frame_length-2] == 0xAA) && (sci_buffer[frame_length-1] == 0x55))
 	{
-		data_checked = 1; //  Correct frame with its own station number is received. 
+		data_checked = 1; //  Correct frame with its own station number  received.
 	}
 	//all the data in frame was correctly received (data_checked = 1) above, now perform frame analysis below.
 	if(data_checked == 1)
@@ -98,7 +61,30 @@ void UpdateAPP()
 	}
 }
 
-
+//-----------------------------------------------------------------------------
+// FUNCTION:   UART_IRQHandler
+// SCOPE:       Applicaiton function
+// DESCRIPTION: UART interrupt
+//
+// PARAMETERS:  none
+//
+// RETURNS:     none
+//-----------------------------------------------------------------------------
+void UART0_IRQHandler()
+{
+	 unsigned char temp;
+	       
+	 temp = UART_D_REG(UART0_BASE_PTR);
+	 if(temp == '$')
+	 {
+	     buff_index = 0;
+	     sci_buffer[buff_index++] = temp;
+	 }
+	 else
+	 {
+	      sci_buffer[buff_index++] = temp;
+	 }
+}
 
 
 

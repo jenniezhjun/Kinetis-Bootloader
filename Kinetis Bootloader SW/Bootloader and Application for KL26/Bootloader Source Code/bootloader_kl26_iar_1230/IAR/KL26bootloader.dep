@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3142381291</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bootloader.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$PROJ_DIR$\..\Common\core_cm0plus.h</file>
+      <file>$PROJ_DIR$\..\Common\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\Common\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\..\Common\MKL26Z4.h</file>
+      <file>$PROJ_DIR$\..\Sources\bootloader.c</file>
+      <file>$PROJ_DIR$\..\Common\system_MKL26Z4.h</file>
+      <file>$PROJ_DIR$\..\Driver\bootcfg\FRDM_KL26Z_cfg.h</file>
+      <file>$PROJ_DIR$\..\Driver\flash\flash_kinetis.c</file>
+      <file>$PROJ_DIR$\..\Driver\flash\flash_kinetis.h</file>
+      <file>$PROJ_DIR$\..\Driver\rs232\rs232.c</file>
+      <file>$PROJ_DIR$\..\Driver\rs232\rs232.h</file>
+      <file>$PROJ_DIR$\..\Sources\bootloader.h</file>
+      <file>$PROJ_DIR$\..\MKL26Z128xxx4.icf</file>
+      <file>$PROJ_DIR$\..\Startup_Code\startup_MKL26Z4.S</file>
+      <file>$PROJ_DIR$\..\Startup_Code\system_MKL26Z4.c</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\rs232.o</file>
+      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_MKL26Z4.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\rs232.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\flash_kinetis.o</file>
+      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+      <file>$PROJ_DIR$\Debug\List\KL26bootloader.map</file>
+      <file>$PROJ_DIR$\Debug\Obj\bootloader.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\KL26bootloader.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\KL26bootloader.bin</file>
+      <file>$PROJ_DIR$\Debug\Exe\KL26bootloader.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_MKL26Z4.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_MKL26Z4.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\flash_kinetis.pbi</file>
+      <file>C:\Users\B55335\Desktop\github\Kinetis-Bootloader\Kbootloader\Bootloader and Application for KL26\Bootloader Source Code\bootloader_kl26_IAR1211\Sources\bootloader.c</file>
+      <file>C:\Users\B55335\Desktop\github\Kinetis-Bootloader\Kbootloader\Bootloader and Application for KL26\Bootloader Source Code\bootloader_kl26_IAR1211\Startup_Code\startup_MKL26Z4.S</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 38 33</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Sources\bootloader.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 34</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9 12 0 3 14 27 36 21 15 10 26 4 2 28 6 7 19 5 20</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 7 26 36 0 2 3 28 27 19 4 6 20 21 5 9 15 14 10 12</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Driver\flash\flash_kinetis.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 41</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 7 9 5 15 10 26 4 36 19 0 21 12 2 27 3 28 6 20</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 12 15 10 7 26 36 0 2 3 28 27 19 4 6 20 21 5 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Driver\rs232\rs232.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 5 7 26 9 36 19 0 21 10 2 27 3 28 6 20 14</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 10 7 26 36 0 2 3 28 27 19 4 6 20 21 5 9 14</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Startup_Code\startup_MKL26Z4.S</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Startup_Code\system_MKL26Z4.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0 9 5 2 28 27 3 36 26 7 19 4 21 6 20</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26 36 0 2 3 28 27 19 7 4 6 20 21 5 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\KL26bootloader.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 33</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 37</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 16 1 31 24 29 40 22 32 25 23</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

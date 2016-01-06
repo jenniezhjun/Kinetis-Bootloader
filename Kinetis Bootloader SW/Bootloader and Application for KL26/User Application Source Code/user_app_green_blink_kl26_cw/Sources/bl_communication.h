@@ -25,9 +25,12 @@ typedef unsigned long long 	DLWord; 	//8 Byte
 							PORT_PCR_REG(PORTA_BASE_PTR, 2) = PORT_PCR_MUX(2);		  
 							 
 #define UART_IsChar() (UART_S1_REG(UART0_BASE_PTR) & UART_S1_RDRF_MASK)
-#define PIN_INIT_AS_UART	PORT_PCR_REG(PORTA_BASE_PTR, 1) = PORT_PCR_MUX(2);\
-							PORT_PCR_REG(PORTA_BASE_PTR, 2) = PORT_PCR_MUX(2);	
+
+#define PIN_INIT_AS_UART0	PORT_PCR_REG(PORTE_BASE_PTR, 20) = PORT_PCR_MUX(4);\
+							PORT_PCR_REG(PORTE_BASE_PTR, 21) = PORT_PCR_MUX(4);	
 // end UART
+
+Byte sci_buffer[];  // save the information PC send
 
 // functions of updateapp.c
 void UART_Initialization(void);

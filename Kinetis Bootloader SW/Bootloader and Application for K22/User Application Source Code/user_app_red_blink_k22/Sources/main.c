@@ -32,6 +32,7 @@
 #include "MK22F51212.h"
 #include "bl_communication.h"
 
+__attribute__((section(".FlashConfig")))const Byte str_app_ok[10]	= "APP_OK";
 #define RELOCATED_VECTORS          0x2000                            // Start address of relocated interrutp vector table
 // enable GPIO clock
 #define INIT_ALL_CPIO_CLK	SIM->SCGC5 |= SIM_SCGC5_PORTA_MASK|SIM_SCGC5_PORTE_MASK;
@@ -48,9 +49,10 @@
 #define GPIO_PIN_MASK            0x1Fu
 #define GPIO_PIN(x)              (((1)<<(x & GPIO_PIN_MASK)))
 
+
 void flash_protect();
 void init_PIT(void);
-
+void UART1_RX_TX_IRQHandler();
 int main(void)
 {
 	int j;
@@ -60,17 +62,21 @@ int main(void)
     INIT_ALL_CPIO_CLK;
     flash_protect();           // protect the entire flash
 
-    INIT_CLOCKS_TO_MODULES;    // init clock module	-- need add to APP of uers - 2
-    UART_Initialization();     // init UART module -- need add to APP of uers - 3
+    INIT_CLOCKS_TO_MODULES;    // init clock module	-- need add to APP of uers
+    UART_Initialization();     // init UART module -- need add to APP of uers
+    NVIC_EnableIRQ(33);       // enable UART1 interrupt -- need add to APP of uers
 
     APP_LED_INIT;
     init_PIT();				   // init timer
     NVIC_EnableIRQ(48);       // enable PIT timer interrupt
 
-   while(1)
+    while(1)
     {
-
-    	UpdateAPP();         // update user's application -- need add to the app of user's - 4
+	   if(buff_index==7)
+		{
+		   buff_index = 0;
+		   UpdateAPP();  // update user's application -- need add to the app of user's
+		}
     }
     /* Never leave main */
     return 0;
@@ -90,7 +96,7 @@ void init_PIT(void)
 	SIM_SCGC6=SIM_SCGC6|0x00800000; //enable PIT clock
 	PIT_MCR = 0x00;                 // turn on PIT
 	PIT_LDVAL0 = 0x003FFFFF;        // setup timer so that the LED have enough time to flash
-	PIT_TCTRL0 = PIT_TCTRL1|0x02;   // enable Timer 1 interrupts
+	PIT_TCTRL0 = PIT_TCTRL0|0x02;   // enable Timer 1 interrupts
 	PIT_TCTRL0 |= 0x01;             // start Timer 1
 }
 //-----------------------------------------------------------------------------
@@ -127,6 +133,8 @@ void flash_protect()
 	FTFA_FPROT3 = 0x00;
 
 }
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // EOF
 ////////////////////////////////////////////////////////////////////////////////

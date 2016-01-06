@@ -1,0 +1,2630 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/******************************************************
+                       ***********************
+    2 00000000         ; * @file:    startup_MK22F51212.s
+    3 00000000         ; * @purpose: CMSIS Cortex-M4 Core Device Startup File f
+                       or the
+    4 00000000         ; *           MK22F51212
+    5 00000000         ; * @version: 2.3
+    6 00000000         ; * @date:    2014-1-13
+    7 00000000         ; *
+    8 00000000         ; * Copyright: 1997 - 2014 Freescale Semiconductor, Inc.
+                        All Rights Reserved.
+    9 00000000         ;*
+   10 00000000         ; *------- <<< Use Configuration Wizard in Context Menu 
+                       >>> ------------------
+   11 00000000         ; *
+   12 00000000         ; ******************************************************
+                       ***********************/
+   13 00000000         
+   14 00000000         
+   15 00000000         ; <h> Stack Configuration
+   16 00000000         ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
+   17 00000000         ; </h>
+   18 00000000         
+   19 00000000 00000400 
+                       Stack_Size
+                               EQU              0x00000400
+   20 00000000         
+   21 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
+=3
+   22 00000000         Stack_Mem
+                               SPACE            Stack_Size
+   23 00000400         __initial_sp
+   24 00000400         
+   25 00000400         
+   26 00000400         ; <h> Heap Configuration
+   27 00000400         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
+   28 00000400         ; </h>
+   29 00000400         
+   30 00000400 00000000 
+                       Heap_Size
+                               EQU              0x00000000
+   31 00000400         
+   32 00000400                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
+3
+   33 00000000         __heap_base
+   34 00000000         Heap_Mem
+                               SPACE            Heap_Size
+   35 00000000         __heap_limit
+   36 00000000         
+   37 00000000         
+   38 00000000                 PRESERVE8
+   39 00000000                 THUMB
+   40 00000000         
+   41 00000000         
+   42 00000000         ; Vector Table Mapped to Address 0 at Reset
+   43 00000000         
+   44 00000000                 AREA             RESET, DATA, READONLY
+   45 00000000                 EXPORT           __Vectors
+   46 00000000                 EXPORT           __Vectors_End
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   47 00000000                 EXPORT           __Vectors_Size
+   48 00000000         
+   49 00000000 00000000 
+                       __Vectors
+                               DCD              __initial_sp ; Top of Stack
+   50 00000004 00000000        DCD              Reset_Handler ; Reset Handler
+   51 00000008 00000000        DCD              NMI_Handler ; NMI Handler
+   52 0000000C 00000000        DCD              HardFault_Handler ; Hard Fault 
+                                                            Handler
+   53 00000010 00000000        DCD              MemManage_Handler 
+                                                            ; MPU Fault Handler
+                                                            
+   54 00000014 00000000        DCD              BusFault_Handler 
+                                                            ; Bus Fault Handler
+                                                            
+   55 00000018 00000000        DCD              UsageFault_Handler ; Usage Faul
+                                                            t Handler
+   56 0000001C 00000000        DCD              0           ; Reserved
+   57 00000020 00000000        DCD              0           ; Reserved
+   58 00000024 00000000        DCD              0           ; Reserved
+   59 00000028 00000000        DCD              0           ; Reserved
+   60 0000002C 00000000        DCD              SVC_Handler ; SVCall Handler
+   61 00000030 00000000        DCD              DebugMon_Handler ; Debug Monito
+                                                            r Handler
+   62 00000034 00000000        DCD              0           ; Reserved
+   63 00000038 00000000        DCD              PendSV_Handler ; PendSV Handler
+                                                            
+   64 0000003C 00000000        DCD              SysTick_Handler 
+                                                            ; SysTick Handler
+   65 00000040         
+   66 00000040         ; External Interrupts
+   67 00000040 00000000        DCD              DMA0_IRQHandler ; DMA Channel 0
+                                                             Transfer Complete
+   68 00000044 00000000        DCD              DMA1_IRQHandler ; DMA Channel 1
+                                                             Transfer Complete
+   69 00000048 00000000        DCD              DMA2_IRQHandler ; DMA Channel 2
+                                                             Transfer Complete
+   70 0000004C 00000000        DCD              DMA3_IRQHandler ; DMA Channel 3
+                                                             Transfer Complete
+   71 00000050 00000000        DCD              DMA4_IRQHandler ; DMA Channel 4
+                                                             Transfer Complete
+   72 00000054 00000000        DCD              DMA5_IRQHandler ; DMA Channel 5
+                                                             Transfer Complete
+   73 00000058 00000000        DCD              DMA6_IRQHandler ; DMA Channel 6
+                                                             Transfer Complete
+   74 0000005C 00000000        DCD              DMA7_IRQHandler ; DMA Channel 7
+                                                             Transfer Complete
+   75 00000060 00000000        DCD              DMA8_IRQHandler ; DMA Channel 8
+                                                             Transfer Complete
+   76 00000064 00000000        DCD              DMA9_IRQHandler ; DMA Channel 9
+                                                             Transfer Complete
+   77 00000068 00000000        DCD              DMA10_IRQHandler ; DMA Channel 
+                                                            10 Transfer Complet
+                                                            e
+   78 0000006C 00000000        DCD              DMA11_IRQHandler ; DMA Channel 
+                                                            11 Transfer Complet
+                                                            e
+   79 00000070 00000000        DCD              DMA12_IRQHandler ; DMA Channel 
+                                                            12 Transfer Complet
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+                                                            e
+   80 00000074 00000000        DCD              DMA13_IRQHandler ; DMA Channel 
+                                                            13 Transfer Complet
+                                                            e
+   81 00000078 00000000        DCD              DMA14_IRQHandler ; DMA Channel 
+                                                            14 Transfer Complet
+                                                            e
+   82 0000007C 00000000        DCD              DMA15_IRQHandler ; DMA Channel 
+                                                            15 Transfer Complet
+                                                            e
+   83 00000080 00000000        DCD              DMA_Error_IRQHandler ; DMA Erro
+                                                            r Interrupt
+   84 00000084 00000000        DCD              MCM_IRQHandler 
+                                                            ; Normal Interrupt
+   85 00000088 00000000        DCD              FTF_IRQHandler ; FTFA Command c
+                                                            omplete interrupt
+   86 0000008C 00000000        DCD              Read_Collision_IRQHandler ; Rea
+                                                            d Collision Interru
+                                                            pt
+   87 00000090 00000000        DCD              LVD_LVW_IRQHandler ; Low Voltag
+                                                            e Detect, Low Volta
+                                                            ge Warning
+   88 00000094 00000000        DCD              LLW_IRQHandler ; Low Leakage Wa
+                                                            keup
+   89 00000098 00000000        DCD              Watchdog_IRQHandler 
+                                                            ; WDOG Interrupt
+   90 0000009C 00000000        DCD              RNG_IRQHandler ; RNG Interrupt
+   91 000000A0 00000000        DCD              I2C0_IRQHandler 
+                                                            ; I2C0 interrupt
+   92 000000A4 00000000        DCD              I2C1_IRQHandler 
+                                                            ; I2C1 interrupt
+   93 000000A8 00000000        DCD              SPI0_IRQHandler 
+                                                            ; SPI0 Interrupt
+   94 000000AC 00000000        DCD              SPI1_IRQHandler 
+                                                            ; SPI1 Interrupt
+   95 000000B0 00000000        DCD              I2S0_Tx_IRQHandler ; I2S0 trans
+                                                            mit interrupt
+   96 000000B4 00000000        DCD              I2S0_Rx_IRQHandler ; I2S0 recei
+                                                            ve interrupt
+   97 000000B8 00000000        DCD              LPUART0_IRQHandler ; LPUART0 st
+                                                            atus/error interrup
+                                                            t
+   98 000000BC 00000000        DCD              UART0_RX_TX_IRQHandler ; UART0 
+                                                            Receive/Transmit in
+                                                            terrupt
+   99 000000C0 00000000        DCD              UART0_ERR_IRQHandler ; UART0 Er
+                                                            ror interrupt
+  100 000000C4 00000000        DCD              UART1_RX_TX_IRQHandler ; UART1 
+                                                            Receive/Transmit in
+                                                            terrupt
+  101 000000C8 00000000        DCD              UART1_ERR_IRQHandler ; UART1 Er
+                                                            ror interrupt
+  102 000000CC 00000000        DCD              UART2_RX_TX_IRQHandler ; UART2 
+                                                            Receive/Transmit in
+                                                            terrupt
+  103 000000D0 00000000        DCD              UART2_ERR_IRQHandler ; UART2 Er
+                                                            ror interrupt
+  104 000000D4 00000000        DCD              Reserved53_IRQHandler ; Reserve
+                                                            d interrupt 53
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+  105 000000D8 00000000        DCD              Reserved54_IRQHandler ; Reserve
+                                                            d interrupt 54
+  106 000000DC 00000000        DCD              ADC0_IRQHandler 
+                                                            ; ADC0 interrupt
+  107 000000E0 00000000        DCD              CMP0_IRQHandler 
+                                                            ; CMP0 interrupt
+  108 000000E4 00000000        DCD              CMP1_IRQHandler 
+                                                            ; CMP1 interrupt
+  109 000000E8 00000000        DCD              FTM0_IRQHandler ; FTM0 fault, o
+                                                            verflow and channel
+                                                            s interrupt
+  110 000000EC 00000000        DCD              FTM1_IRQHandler ; FTM1 fault, o
+                                                            verflow and channel
+                                                            s interrupt
+  111 000000F0 00000000        DCD              FTM2_IRQHandler ; FTM2 fault, o
+                                                            verflow and channel
+                                                            s interrupt
+  112 000000F4 00000000        DCD              Reserved61_IRQHandler ; Reserve
+                                                            d interrupt 61
+  113 000000F8 00000000        DCD              RTC_IRQHandler ; RTC interrupt
+  114 000000FC 00000000        DCD              RTC_Seconds_IRQHandler ; RTC se
+                                                            conds interrupt
+  115 00000100 00000000        DCD              PIT0_IRQHandler ; PIT timer cha
+                                                            nnel 0 interrupt
+  116 00000104 00000000        DCD              PIT1_IRQHandler ; PIT timer cha
+                                                            nnel 1 interrupt
+  117 00000108 00000000        DCD              PIT2_IRQHandler ; PIT timer cha
+                                                            nnel 2 interrupt
+  118 0000010C 00000000        DCD              PIT3_IRQHandler ; PIT timer cha
+                                                            nnel 3 interrupt
+  119 00000110 00000000        DCD              PDB0_IRQHandler 
+                                                            ; PDB0 Interrupt
+  120 00000114 00000000        DCD              USB0_IRQHandler 
+                                                            ; USB0 interrupt
+  121 00000118 00000000        DCD              Reserved70_IRQHandler ; Reserve
+                                                            d interrupt 70
+  122 0000011C 00000000        DCD              Reserved71_IRQHandler ; Reserve
+                                                            d interrupt 71
+  123 00000120 00000000        DCD              DAC0_IRQHandler 
+                                                            ; DAC0 interrupt
+  124 00000124 00000000        DCD              MCG_IRQHandler ; MCG Interrupt
+  125 00000128 00000000        DCD              LPTimer_IRQHandler 
+                                                            ; LPTimer interrupt
+                                                            
+  126 0000012C 00000000        DCD              PORTA_IRQHandler 
+                                                            ; Port A interrupt
+  127 00000130 00000000        DCD              PORTB_IRQHandler 
+                                                            ; Port B interrupt
+  128 00000134 00000000        DCD              PORTC_IRQHandler 
+                                                            ; Port C interrupt
+  129 00000138 00000000        DCD              PORTD_IRQHandler 
+                                                            ; Port D interrupt
+  130 0000013C 00000000        DCD              PORTE_IRQHandler 
+                                                            ; Port E interrupt
+  131 00000140 00000000        DCD              SWI_IRQHandler ; Software inter
+                                                            rupt
+  132 00000144 00000000        DCD              Reserved81_IRQHandler ; Reserve
+                                                            d interrupt 81
+  133 00000148 00000000        DCD              Reserved82_IRQHandler ; Reserve
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+                                                            d interrupt 82
+  134 0000014C 00000000        DCD              Reserved83_IRQHandler ; Reserve
+                                                            d interrupt 83
+  135 00000150 00000000        DCD              Reserved84_IRQHandler ; Reserve
+                                                            d interrupt 84
+  136 00000154 00000000        DCD              Reserved85_IRQHandler ; Reserve
+                                                            d interrupt 85
+  137 00000158 00000000        DCD              Reserved86_IRQHandler ; Reserve
+                                                            d interrupt 86
+  138 0000015C 00000000        DCD              FTM3_IRQHandler ; FTM3 fault, o
+                                                            verflow and channel
+                                                            s interrupt
+  139 00000160 00000000        DCD              DAC1_IRQHandler 
+                                                            ; DAC1 interrupt
+  140 00000164 00000000        DCD              ADC1_IRQHandler 
+                                                            ; ADC1 interrupt
+  141 00000168 00000000        DCD              Reserved90_IRQHandler ; Reserve
+                                                            d Interrupt 90
+  142 0000016C 00000000        DCD              Reserved91_IRQHandler ; Reserve
+                                                            d Interrupt 91
+  143 00000170 00000000        DCD              Reserved92_IRQHandler ; Reserve
+                                                            d Interrupt 92
+  144 00000174 00000000        DCD              Reserved93_IRQHandler ; Reserve
+                                                            d Interrupt 93
+  145 00000178 00000000        DCD              Reserved94_IRQHandler ; Reserve
+                                                            d Interrupt 94
+  146 0000017C 00000000        DCD              Reserved95_IRQHandler ; Reserve
+                                                            d Interrupt 95
+  147 00000180 00000000        DCD              Reserved96_IRQHandler ; Reserve
+                                                            d Interrupt 96
+  148 00000184 00000000        DCD              Reserved97_IRQHandler ; Reserve
+                                                            d Interrupt 97
+  149 00000188 00000000        DCD              Reserved98_IRQHandler ; Reserve
+                                                            d Interrupt 98
+  150 0000018C 00000000        DCD              Reserved99_IRQHandler ; Reserve
+                                                            d Interrupt 99
+  151 00000190 00000000        DCD              Reserved100_IRQHandler ; Reserv
+                                                            ed Interrupt 100
+  152 00000194 00000000        DCD              Reserved101_IRQHandler ; Reserv
+                                                            ed Interrupt 101
+  153 00000198 00000000        DCD              DefaultISR  ; 102
+  154 0000019C 00000000        DCD              DefaultISR  ; 103
+  155 000001A0 00000000        DCD              DefaultISR  ; 104
+  156 000001A4 00000000        DCD              DefaultISR  ; 105
+  157 000001A8 00000000        DCD              DefaultISR  ; 106
+  158 000001AC 00000000        DCD              DefaultISR  ; 107
+  159 000001B0 00000000        DCD              DefaultISR  ; 108
+  160 000001B4 00000000        DCD              DefaultISR  ; 109
+  161 000001B8 00000000        DCD              DefaultISR  ; 110
+  162 000001BC 00000000        DCD              DefaultISR  ; 111
+  163 000001C0 00000000        DCD              DefaultISR  ; 112
+  164 000001C4 00000000        DCD              DefaultISR  ; 113
+  165 000001C8 00000000        DCD              DefaultISR  ; 114
+  166 000001CC 00000000        DCD              DefaultISR  ; 115
+  167 000001D0 00000000        DCD              DefaultISR  ; 116
+  168 000001D4 00000000        DCD              DefaultISR  ; 117
+  169 000001D8 00000000        DCD              DefaultISR  ; 118
+  170 000001DC 00000000        DCD              DefaultISR  ; 119
+  171 000001E0 00000000        DCD              DefaultISR  ; 120
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+  172 000001E4 00000000        DCD              DefaultISR  ; 121
+  173 000001E8 00000000        DCD              DefaultISR  ; 122
+  174 000001EC 00000000        DCD              DefaultISR  ; 123
+  175 000001F0 00000000        DCD              DefaultISR  ; 124
+  176 000001F4 00000000        DCD              DefaultISR  ; 125
+  177 000001F8 00000000        DCD              DefaultISR  ; 126
+  178 000001FC 00000000        DCD              DefaultISR  ; 127
+  179 00000200 00000000        DCD              DefaultISR  ; 128
+  180 00000204 00000000        DCD              DefaultISR  ; 129
+  181 00000208 00000000        DCD              DefaultISR  ; 130
+  182 0000020C 00000000        DCD              DefaultISR  ; 131
+  183 00000210 00000000        DCD              DefaultISR  ; 132
+  184 00000214 00000000        DCD              DefaultISR  ; 133
+  185 00000218 00000000        DCD              DefaultISR  ; 134
+  186 0000021C 00000000        DCD              DefaultISR  ; 135
+  187 00000220 00000000        DCD              DefaultISR  ; 136
+  188 00000224 00000000        DCD              DefaultISR  ; 137
+  189 00000228 00000000        DCD              DefaultISR  ; 138
+  190 0000022C 00000000        DCD              DefaultISR  ; 139
+  191 00000230 00000000        DCD              DefaultISR  ; 140
+  192 00000234 00000000        DCD              DefaultISR  ; 141
+  193 00000238 00000000        DCD              DefaultISR  ; 142
+  194 0000023C 00000000        DCD              DefaultISR  ; 143
+  195 00000240 00000000        DCD              DefaultISR  ; 144
+  196 00000244 00000000        DCD              DefaultISR  ; 145
+  197 00000248 00000000        DCD              DefaultISR  ; 146
+  198 0000024C 00000000        DCD              DefaultISR  ; 147
+  199 00000250 00000000        DCD              DefaultISR  ; 148
+  200 00000254 00000000        DCD              DefaultISR  ; 149
+  201 00000258 00000000        DCD              DefaultISR  ; 150
+  202 0000025C 00000000        DCD              DefaultISR  ; 151
+  203 00000260 00000000        DCD              DefaultISR  ; 152
+  204 00000264 00000000        DCD              DefaultISR  ; 153
+  205 00000268 00000000        DCD              DefaultISR  ; 154
+  206 0000026C 00000000        DCD              DefaultISR  ; 155
+  207 00000270 00000000        DCD              DefaultISR  ; 156
+  208 00000274 00000000        DCD              DefaultISR  ; 157
+  209 00000278 00000000        DCD              DefaultISR  ; 158
+  210 0000027C 00000000        DCD              DefaultISR  ; 159
+  211 00000280 00000000        DCD              DefaultISR  ; 160
+  212 00000284 00000000        DCD              DefaultISR  ; 161
+  213 00000288 00000000        DCD              DefaultISR  ; 162
+  214 0000028C 00000000        DCD              DefaultISR  ; 163
+  215 00000290 00000000        DCD              DefaultISR  ; 164
+  216 00000294 00000000        DCD              DefaultISR  ; 165
+  217 00000298 00000000        DCD              DefaultISR  ; 166
+  218 0000029C 00000000        DCD              DefaultISR  ; 167
+  219 000002A0 00000000        DCD              DefaultISR  ; 168
+  220 000002A4 00000000        DCD              DefaultISR  ; 169
+  221 000002A8 00000000        DCD              DefaultISR  ; 170
+  222 000002AC 00000000        DCD              DefaultISR  ; 171
+  223 000002B0 00000000        DCD              DefaultISR  ; 172
+  224 000002B4 00000000        DCD              DefaultISR  ; 173
+  225 000002B8 00000000        DCD              DefaultISR  ; 174
+  226 000002BC 00000000        DCD              DefaultISR  ; 175
+  227 000002C0 00000000        DCD              DefaultISR  ; 176
+  228 000002C4 00000000        DCD              DefaultISR  ; 177
+  229 000002C8 00000000        DCD              DefaultISR  ; 178
+  230 000002CC 00000000        DCD              DefaultISR  ; 179
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+  231 000002D0 00000000        DCD              DefaultISR  ; 180
+  232 000002D4 00000000        DCD              DefaultISR  ; 181
+  233 000002D8 00000000        DCD              DefaultISR  ; 182
+  234 000002DC 00000000        DCD              DefaultISR  ; 183
+  235 000002E0 00000000        DCD              DefaultISR  ; 184
+  236 000002E4 00000000        DCD              DefaultISR  ; 185
+  237 000002E8 00000000        DCD              DefaultISR  ; 186
+  238 000002EC 00000000        DCD              DefaultISR  ; 187
+  239 000002F0 00000000        DCD              DefaultISR  ; 188
+  240 000002F4 00000000        DCD              DefaultISR  ; 189
+  241 000002F8 00000000        DCD              DefaultISR  ; 190
+  242 000002FC 00000000        DCD              DefaultISR  ; 191
+  243 00000300 00000000        DCD              DefaultISR  ; 192
+  244 00000304 00000000        DCD              DefaultISR  ; 193
+  245 00000308 00000000        DCD              DefaultISR  ; 194
+  246 0000030C 00000000        DCD              DefaultISR  ; 195
+  247 00000310 00000000        DCD              DefaultISR  ; 196
+  248 00000314 00000000        DCD              DefaultISR  ; 197
+  249 00000318 00000000        DCD              DefaultISR  ; 198
+  250 0000031C 00000000        DCD              DefaultISR  ; 199
+  251 00000320 00000000        DCD              DefaultISR  ; 200
+  252 00000324 00000000        DCD              DefaultISR  ; 201
+  253 00000328 00000000        DCD              DefaultISR  ; 202
+  254 0000032C 00000000        DCD              DefaultISR  ; 203
+  255 00000330 00000000        DCD              DefaultISR  ; 204
+  256 00000334 00000000        DCD              DefaultISR  ; 205
+  257 00000338 00000000        DCD              DefaultISR  ; 206
+  258 0000033C 00000000        DCD              DefaultISR  ; 207
+  259 00000340 00000000        DCD              DefaultISR  ; 208
+  260 00000344 00000000        DCD              DefaultISR  ; 209
+  261 00000348 00000000        DCD              DefaultISR  ; 210
+  262 0000034C 00000000        DCD              DefaultISR  ; 211
+  263 00000350 00000000        DCD              DefaultISR  ; 212
+  264 00000354 00000000        DCD              DefaultISR  ; 213
+  265 00000358 00000000        DCD              DefaultISR  ; 214
+  266 0000035C 00000000        DCD              DefaultISR  ; 215
+  267 00000360 00000000        DCD              DefaultISR  ; 216
+  268 00000364 00000000        DCD              DefaultISR  ; 217
+  269 00000368 00000000        DCD              DefaultISR  ; 218
+  270 0000036C 00000000        DCD              DefaultISR  ; 219
+  271 00000370 00000000        DCD              DefaultISR  ; 220
+  272 00000374 00000000        DCD              DefaultISR  ; 221
+  273 00000378 00000000        DCD              DefaultISR  ; 222
+  274 0000037C 00000000        DCD              DefaultISR  ; 223
+  275 00000380 00000000        DCD              DefaultISR  ; 224
+  276 00000384 00000000        DCD              DefaultISR  ; 225
+  277 00000388 00000000        DCD              DefaultISR  ; 226
+  278 0000038C 00000000        DCD              DefaultISR  ; 227
+  279 00000390 00000000        DCD              DefaultISR  ; 228
+  280 00000394 00000000        DCD              DefaultISR  ; 229
+  281 00000398 00000000        DCD              DefaultISR  ; 230
+  282 0000039C 00000000        DCD              DefaultISR  ; 231
+  283 000003A0 00000000        DCD              DefaultISR  ; 232
+  284 000003A4 00000000        DCD              DefaultISR  ; 233
+  285 000003A8 00000000        DCD              DefaultISR  ; 234
+  286 000003AC 00000000        DCD              DefaultISR  ; 235
+  287 000003B0 00000000        DCD              DefaultISR  ; 236
+  288 000003B4 00000000        DCD              DefaultISR  ; 237
+  289 000003B8 00000000        DCD              DefaultISR  ; 238
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+  290 000003BC 00000000        DCD              DefaultISR  ; 239
+  291 000003C0 00000000        DCD              DefaultISR  ; 240
+  292 000003C4 00000000        DCD              DefaultISR  ; 241
+  293 000003C8 00000000        DCD              DefaultISR  ; 242
+  294 000003CC 00000000        DCD              DefaultISR  ; 243
+  295 000003D0 00000000        DCD              DefaultISR  ; 244
+  296 000003D4 00000000        DCD              DefaultISR  ; 245
+  297 000003D8 00000000        DCD              DefaultISR  ; 246
+  298 000003DC 00000000        DCD              DefaultISR  ; 247
+  299 000003E0 00000000        DCD              DefaultISR  ; 248
+  300 000003E4 00000000        DCD              DefaultISR  ; 249
+  301 000003E8 00000000        DCD              DefaultISR  ; 250
+  302 000003EC 00000000        DCD              DefaultISR  ; 251
+  303 000003F0 00000000        DCD              DefaultISR  ; 252
+  304 000003F4 00000000        DCD              DefaultISR  ; 253
+  305 000003F8 00000000        DCD              DefaultISR  ; 254
+  306 000003FC 00000000        DCD              DefaultISR  ; 255
+  307 00000400         __Vectors_End
+  308 00000400         
+  309 00000400 00000400 
+                       __Vectors_Size
+                               EQU              __Vectors_End - __Vectors
+  310 00000400         
+  311 00000400         ; <h> Flash Configuration
+  312 00000400         ;   <i> 16-byte flash configuration field that stores de
+                       fault protection settings (loaded on reset)
+  313 00000400         ;   <i> and security information that allows the MCU to 
+                       restrict acces to the FTFL module.
+  314 00000400         ;   <h> Backdoor Comparison Key
+  315 00000400         ;     <o0>  Backdoor Key 0  <0x0-0xFF:2>
+  316 00000400         ;     <o1>  Backdoor Key 1  <0x0-0xFF:2>
+  317 00000400         ;     <o2>  Backdoor Key 2  <0x0-0xFF:2>
+  318 00000400         ;     <o3>  Backdoor Key 3  <0x0-0xFF:2>
+  319 00000400         ;     <o4>  Backdoor Key 4  <0x0-0xFF:2>
+  320 00000400         ;     <o5>  Backdoor Key 5  <0x0-0xFF:2>
+  321 00000400         ;     <o6>  Backdoor Key 6  <0x0-0xFF:2>
+  322 00000400         ;     <o7>  Backdoor Key 7  <0x0-0xFF:2>
+  323 00000400 000000FF 
+                       BackDoorK0
+                               EQU              0xFF
+  324 00000400 000000FF 
+                       BackDoorK1
+                               EQU              0xFF
+  325 00000400 000000FF 
+                       BackDoorK2
+                               EQU              0xFF
+  326 00000400 000000FF 
+                       BackDoorK3
+                               EQU              0xFF
+  327 00000400 000000FF 
+                       BackDoorK4
+                               EQU              0xFF
+  328 00000400 000000FF 
+                       BackDoorK5
+                               EQU              0xFF
+  329 00000400 000000FF 
+                       BackDoorK6
+                               EQU              0xFF
+  330 00000400 000000FF 
+
+
+
+ARM Macro Assembler    Page 9 
+
+
+                       BackDoorK7
+                               EQU              0xFF
+  331 00000400         ;   </h>
+  332 00000400         ;   <h> Program flash protection bytes (FPROT)
+  333 00000400         ;     <i> Each program flash region can be protected fro
+                       m program and erase operation by setting the associated 
+                       PROT bit.
+  334 00000400         ;     <i> Each bit protects a 1/32 region of the program
+                        flash memory.
+  335 00000400         ;     <h> FPROT0
+  336 00000400         ;       <i> Program flash protection bytes
+  337 00000400         ;       <i> 1/32 - 8/32 region
+  338 00000400         ;       <o.0>   FPROT0.0
+  339 00000400         ;       <o.1>   FPROT0.1
+  340 00000400         ;       <o.2>   FPROT0.2
+  341 00000400         ;       <o.3>   FPROT0.3
+  342 00000400         ;       <o.4>   FPROT0.4
+  343 00000400         ;       <o.5>   FPROT0.5
+  344 00000400         ;       <o.6>   FPROT0.6
+  345 00000400         ;       <o.7>   FPROT0.7
+  346 00000400 00000000 
+                       nFPROT0 EQU              0x00
+  347 00000400 000000FF 
+                       FPROT0  EQU              nFPROT0:EOR:0xFF
+  348 00000400         ;     </h>
+  349 00000400         ;     <h> FPROT1
+  350 00000400         ;       <i> Program Flash Region Protect Register 1
+  351 00000400         ;       <i> 9/32 - 16/32 region
+  352 00000400         ;       <o.0>   FPROT1.0
+  353 00000400         ;       <o.1>   FPROT1.1
+  354 00000400         ;       <o.2>   FPROT1.2
+  355 00000400         ;       <o.3>   FPROT1.3
+  356 00000400         ;       <o.4>   FPROT1.4
+  357 00000400         ;       <o.5>   FPROT1.5
+  358 00000400         ;       <o.6>   FPROT1.6
+  359 00000400         ;       <o.7>   FPROT1.7
+  360 00000400 00000000 
+                       nFPROT1 EQU              0x00
+  361 00000400 000000FF 
+                       FPROT1  EQU              nFPROT1:EOR:0xFF
+  362 00000400         ;     </h>
+  363 00000400         ;     <h> FPROT2
+  364 00000400         ;       <i> Program Flash Region Protect Register 2
+  365 00000400         ;       <i> 17/32 - 24/32 region
+  366 00000400         ;       <o.0>   FPROT2.0
+  367 00000400         ;       <o.1>   FPROT2.1
+  368 00000400         ;       <o.2>   FPROT2.2
+  369 00000400         ;       <o.3>   FPROT2.3
+  370 00000400         ;       <o.4>   FPROT2.4
+  371 00000400         ;       <o.5>   FPROT2.5
+  372 00000400         ;       <o.6>   FPROT2.6
+  373 00000400         ;       <o.7>   FPROT2.7
+  374 00000400 00000000 
+                       nFPROT2 EQU              0x00
+  375 00000400 000000FF 
+                       FPROT2  EQU              nFPROT2:EOR:0xFF
+  376 00000400         ;     </h>
+  377 00000400         ;     <h> FPROT3
+  378 00000400         ;       <i> Program Flash Region Protect Register 3
+
+
+
+ARM Macro Assembler    Page 10 
+
+
+  379 00000400         ;       <i> 25/32 - 32/32 region
+  380 00000400         ;       <o.0>   FPROT3.0
+  381 00000400         ;       <o.1>   FPROT3.1
+  382 00000400         ;       <o.2>   FPROT3.2
+  383 00000400         ;       <o.3>   FPROT3.3
+  384 00000400         ;       <o.4>   FPROT3.4
+  385 00000400         ;       <o.5>   FPROT3.5
+  386 00000400         ;       <o.6>   FPROT3.6
+  387 00000400         ;       <o.7>   FPROT3.7
+  388 00000400 00000000 
+                       nFPROT3 EQU              0x00
+  389 00000400 000000FF 
+                       FPROT3  EQU              nFPROT3:EOR:0xFF
+  390 00000400         ;     </h>
+  391 00000400         ;   </h>
+  392 00000400         ;   <h> Data flash protection byte (FDPROT)
+  393 00000400         ;     <i> Each bit protects a 1/8 region of the data fla
+                       sh memory.
+  394 00000400         ;     <i> (Program flash only devices: Reserved)
+  395 00000400         ;     <o.0>   FDPROT.0
+  396 00000400         ;     <o.1>   FDPROT.1
+  397 00000400         ;     <o.2>   FDPROT.2
+  398 00000400         ;     <o.3>   FDPROT.3
+  399 00000400         ;     <o.4>   FDPROT.4
+  400 00000400         ;     <o.5>   FDPROT.5
+  401 00000400         ;     <o.6>   FDPROT.6
+  402 00000400         ;     <o.7>   FDPROT.7
+  403 00000400 00000000 
+                       nFDPROT EQU              0x00
+  404 00000400 000000FF 
+                       FDPROT  EQU              nFDPROT:EOR:0xFF
+  405 00000400         ;   </h>
+  406 00000400         ;   <h> EEPROM protection byte (FEPROT)
+  407 00000400         ;     <i> FlexNVM devices: Each bit protects a 1/8 regio
+                       n of the EEPROM.
+  408 00000400         ;     <i> (Program flash only devices: Reserved)
+  409 00000400         ;     <o.0>   FEPROT.0
+  410 00000400         ;     <o.1>   FEPROT.1
+  411 00000400         ;     <o.2>   FEPROT.2
+  412 00000400         ;     <o.3>   FEPROT.3
+  413 00000400         ;     <o.4>   FEPROT.4
+  414 00000400         ;     <o.5>   FEPROT.5
+  415 00000400         ;     <o.6>   FEPROT.6
+  416 00000400         ;     <o.7>   FEPROT.7
+  417 00000400 00000000 
+                       nFEPROT EQU              0x00
+  418 00000400 000000FF 
+                       FEPROT  EQU              nFEPROT:EOR:0xFF
+  419 00000400         ;   </h>
+  420 00000400         ;   <h> Flash nonvolatile option byte (FOPT)
+  421 00000400         ;     <i> Allows the user to customize the operation of 
+                       the MCU at boot time.
+  422 00000400         ;     <o.0>  LPBOOT
+  423 00000400         ;       <0=> Low-power boot
+  424 00000400         ;       <1=> normal boot
+  425 00000400         ;     <o.1>  EZPORT_DIS
+  426 00000400         ;       <0=> EzPort operation is enabled
+  427 00000400         ;       <1=> EzPort operation is disabled
+  428 00000400 000000FF 
+
+
+
+ARM Macro Assembler    Page 11 
+
+
+                       FOPT    EQU              0xFF
+  429 00000400         ;   </h>
+  430 00000400         ;   <h> Flash security byte (FSEC)
+  431 00000400         ;     <i> WARNING: If SEC field is configured as "MCU se
+                       curity status is secure" and MEEN field is configured as
+                        "Mass erase is disabled",
+  432 00000400         ;     <i> MCU's security status cannot be set back to un
+                       secure state since Mass erase via the debugger is blocke
+                       d !!!
+  433 00000400         ;     <o.0..1> SEC
+  434 00000400         ;       <2=> MCU security status is unsecure
+  435 00000400         ;       <3=> MCU security status is secure
+  436 00000400         ;         <i> Flash Security
+  437 00000400         ;         <i> This bits define the security state of the
+                        MCU.
+  438 00000400         ;     <o.2..3> FSLACC
+  439 00000400         ;       <2=> Freescale factory access denied
+  440 00000400         ;       <3=> Freescale factory access granted
+  441 00000400         ;         <i> Freescale Failure Analysis Access Code
+  442 00000400         ;         <i> This bits define the security state of the
+                        MCU.
+  443 00000400         ;     <o.4..5> MEEN
+  444 00000400         ;       <2=> Mass erase is disabled
+  445 00000400         ;       <3=> Mass erase is enabled
+  446 00000400         ;         <i> Mass Erase Enable Bits
+  447 00000400         ;         <i> Enables and disables mass erase capability
+                        of the FTFL module
+  448 00000400         ;     <o.6..7> KEYEN
+  449 00000400         ;       <2=> Backdoor key access enabled
+  450 00000400         ;       <3=> Backdoor key access disabled
+  451 00000400         ;         <i> Backdoor key Security Enable
+  452 00000400         ;         <i> These bits enable and disable backdoor key
+                        access to the FTFL module.
+  453 00000400 000000FE 
+                       FSEC    EQU              0xFE
+  454 00000400         ;   </h>
+  455 00000400         ; </h>
+  456 00000400                 IF               :LNOT::DEF:RAM_TARGET
+  457 00000400                 AREA             |.ARM.__at_0x400|, CODE, READON
+LY
+  458 00000000 FF FF FF 
+              FF               DCB              BackDoorK0, BackDoorK1, BackDoo
+rK2, BackDoorK3
+  459 00000004 FF FF FF 
+              FF               DCB              BackDoorK4, BackDoorK5, BackDoo
+rK6, BackDoorK7
+  460 00000008 FF FF FF 
+              FF               DCB              FPROT0,     FPROT1,     FPROT2,
+     FPROT3
+  461 0000000C FE FF FF 
+              FF               DCB              FSEC,       FOPT,       FEPROT,
+     FDPROT
+  462 00000010                 ENDIF
+  463 00000010         
+  464 00000010                 AREA             |.text|, CODE, READONLY
+  465 00000000         
+  466 00000000         ;init_data_bss
+  467 00000000         ;     User defined function for data and bs memory segme
+                       nt initialization.
+
+
+
+ARM Macro Assembler    Page 12 
+
+
+  468 00000000         ;      Weak definition to be replaced by user code.
+  469 00000000         
+  470 00000000         init_data_bss
+                               PROC
+  471 00000000                 EXPORT           init_data_bss             [WEAK
+]
+  472 00000000 4770            BX               R14
+  473 00000002                 ENDP
+  474 00000002         
+  475 00000002         ; Reset Handler
+  476 00000002         
+  477 00000002         Reset_Handler
+                               PROC
+  478 00000002                 EXPORT           Reset_Handler             [WEAK
+]
+  479 00000002                 IMPORT           SystemInit
+  480 00000002                 IMPORT           __main
+  481 00000002 480B            LDR              R0, =SystemInit
+  482 00000004 4780            BLX              R0
+  483 00000006 480B            LDR              R0, =init_data_bss
+  484 00000008 4780            BLX              R0
+  485 0000000A 480B            LDR              R0, =__main
+  486 0000000C 4700            BX               R0
+  487 0000000E                 ENDP
+  488 0000000E         
+  489 0000000E         
+  490 0000000E         ; Dummy Exception Handlers (infinite loops which can be 
+                       modified)
+  491 0000000E         
+  492 0000000E         NMI_Handler
+                               PROC
+  493 0000000E                 EXPORT           NMI_Handler               [WEAK
+]
+  494 0000000E E7FE            B                .
+  495 00000010                 ENDP
+  497 00000010         HardFault_Handler
+                               PROC
+  498 00000010                 EXPORT           HardFault_Handler         [WEAK
+]
+  499 00000010 E7FE            B                .
+  500 00000012                 ENDP
+  502 00000012         MemManage_Handler
+                               PROC
+  503 00000012                 EXPORT           MemManage_Handler         [WEAK
+]
+  504 00000012 E7FE            B                .
+  505 00000014                 ENDP
+  507 00000014         BusFault_Handler
+                               PROC
+  508 00000014                 EXPORT           BusFault_Handler          [WEAK
+]
+  509 00000014 E7FE            B                .
+  510 00000016                 ENDP
+  512 00000016         UsageFault_Handler
+                               PROC
+  513 00000016                 EXPORT           UsageFault_Handler        [WEAK
+]
+  514 00000016 E7FE            B                .
+  515 00000018                 ENDP
+
+
+
+ARM Macro Assembler    Page 13 
+
+
+  516 00000018         SVC_Handler
+                               PROC
+  517 00000018                 EXPORT           SVC_Handler               [WEAK
+]
+  518 00000018 E7FE            B                .
+  519 0000001A                 ENDP
+  521 0000001A         DebugMon_Handler
+                               PROC
+  522 0000001A                 EXPORT           DebugMon_Handler          [WEAK
+]
+  523 0000001A E7FE            B                .
+  524 0000001C                 ENDP
+  525 0000001C         PendSV_Handler
+                               PROC
+  526 0000001C                 EXPORT           PendSV_Handler            [WEAK
+]
+  527 0000001C E7FE            B                .
+  528 0000001E                 ENDP
+  529 0000001E         SysTick_Handler
+                               PROC
+  530 0000001E                 EXPORT           SysTick_Handler           [WEAK
+]
+  531 0000001E E7FE            B                .
+  532 00000020                 ENDP
+  533 00000020         
+  534 00000020         Default_Handler
+                               PROC
+  535 00000020                 EXPORT           DMA0_IRQHandler     [WEAK]
+  536 00000020                 EXPORT           DMA1_IRQHandler     [WEAK]
+  537 00000020                 EXPORT           DMA2_IRQHandler     [WEAK]
+  538 00000020                 EXPORT           DMA3_IRQHandler     [WEAK]
+  539 00000020                 EXPORT           DMA4_IRQHandler     [WEAK]
+  540 00000020                 EXPORT           DMA5_IRQHandler     [WEAK]
+  541 00000020                 EXPORT           DMA6_IRQHandler     [WEAK]
+  542 00000020                 EXPORT           DMA7_IRQHandler     [WEAK]
+  543 00000020                 EXPORT           DMA8_IRQHandler     [WEAK]
+  544 00000020                 EXPORT           DMA9_IRQHandler     [WEAK]
+  545 00000020                 EXPORT           DMA10_IRQHandler     [WEAK]
+  546 00000020                 EXPORT           DMA11_IRQHandler     [WEAK]
+  547 00000020                 EXPORT           DMA12_IRQHandler     [WEAK]
+  548 00000020                 EXPORT           DMA13_IRQHandler     [WEAK]
+  549 00000020                 EXPORT           DMA14_IRQHandler     [WEAK]
+  550 00000020                 EXPORT           DMA15_IRQHandler     [WEAK]
+  551 00000020                 EXPORT           DMA_Error_IRQHandler     [WEAK]
+  552 00000020                 EXPORT           MCM_IRQHandler     [WEAK]
+  553 00000020                 EXPORT           FTF_IRQHandler     [WEAK]
+  554 00000020                 EXPORT           Read_Collision_IRQHandler     [
+WEAK]
+  555 00000020                 EXPORT           LVD_LVW_IRQHandler     [WEAK]
+  556 00000020                 EXPORT           LLW_IRQHandler     [WEAK]
+  557 00000020                 EXPORT           Watchdog_IRQHandler     [WEAK]
+  558 00000020                 EXPORT           RNG_IRQHandler     [WEAK]
+  559 00000020                 EXPORT           I2C0_IRQHandler     [WEAK]
+  560 00000020                 EXPORT           I2C1_IRQHandler     [WEAK]
+  561 00000020                 EXPORT           SPI0_IRQHandler     [WEAK]
+  562 00000020                 EXPORT           SPI1_IRQHandler     [WEAK]
+  563 00000020                 EXPORT           I2S0_Tx_IRQHandler     [WEAK]
+  564 00000020                 EXPORT           I2S0_Rx_IRQHandler     [WEAK]
+  565 00000020                 EXPORT           LPUART0_IRQHandler     [WEAK]
+
+
+
+ARM Macro Assembler    Page 14 
+
+
+  566 00000020                 EXPORT           UART0_RX_TX_IRQHandler     [WEA
+K]
+  567 00000020                 EXPORT           UART0_ERR_IRQHandler     [WEAK]
+  568 00000020                 EXPORT           UART1_RX_TX_IRQHandler     [WEA
+K]
+  569 00000020                 EXPORT           UART1_ERR_IRQHandler     [WEAK]
+  570 00000020                 EXPORT           UART2_RX_TX_IRQHandler     [WEA
+K]
+  571 00000020                 EXPORT           UART2_ERR_IRQHandler     [WEAK]
+  572 00000020                 EXPORT           Reserved53_IRQHandler     [WEAK
+]
+  573 00000020                 EXPORT           Reserved54_IRQHandler     [WEAK
+]
+  574 00000020                 EXPORT           ADC0_IRQHandler     [WEAK]
+  575 00000020                 EXPORT           CMP0_IRQHandler     [WEAK]
+  576 00000020                 EXPORT           CMP1_IRQHandler     [WEAK]
+  577 00000020                 EXPORT           FTM0_IRQHandler     [WEAK]
+  578 00000020                 EXPORT           FTM1_IRQHandler     [WEAK]
+  579 00000020                 EXPORT           FTM2_IRQHandler     [WEAK]
+  580 00000020                 EXPORT           Reserved61_IRQHandler     [WEAK
+]
+  581 00000020                 EXPORT           RTC_IRQHandler     [WEAK]
+  582 00000020                 EXPORT           RTC_Seconds_IRQHandler     [WEA
+K]
+  583 00000020                 EXPORT           PIT0_IRQHandler     [WEAK]
+  584 00000020                 EXPORT           PIT1_IRQHandler     [WEAK]
+  585 00000020                 EXPORT           PIT2_IRQHandler     [WEAK]
+  586 00000020                 EXPORT           PIT3_IRQHandler     [WEAK]
+  587 00000020                 EXPORT           PDB0_IRQHandler     [WEAK]
+  588 00000020                 EXPORT           USB0_IRQHandler     [WEAK]
+  589 00000020                 EXPORT           Reserved70_IRQHandler     [WEAK
+]
+  590 00000020                 EXPORT           Reserved71_IRQHandler     [WEAK
+]
+  591 00000020                 EXPORT           DAC0_IRQHandler     [WEAK]
+  592 00000020                 EXPORT           MCG_IRQHandler     [WEAK]
+  593 00000020                 EXPORT           LPTimer_IRQHandler     [WEAK]
+  594 00000020                 EXPORT           PORTA_IRQHandler     [WEAK]
+  595 00000020                 EXPORT           PORTB_IRQHandler     [WEAK]
+  596 00000020                 EXPORT           PORTC_IRQHandler     [WEAK]
+  597 00000020                 EXPORT           PORTD_IRQHandler     [WEAK]
+  598 00000020                 EXPORT           PORTE_IRQHandler     [WEAK]
+  599 00000020                 EXPORT           SWI_IRQHandler     [WEAK]
+  600 00000020                 EXPORT           Reserved81_IRQHandler     [WEAK
+]
+  601 00000020                 EXPORT           Reserved82_IRQHandler     [WEAK
+]
+  602 00000020                 EXPORT           Reserved83_IRQHandler     [WEAK
+]
+  603 00000020                 EXPORT           Reserved84_IRQHandler     [WEAK
+]
+  604 00000020                 EXPORT           Reserved85_IRQHandler     [WEAK
+]
+  605 00000020                 EXPORT           Reserved86_IRQHandler     [WEAK
+]
+  606 00000020                 EXPORT           FTM3_IRQHandler     [WEAK]
+  607 00000020                 EXPORT           DAC1_IRQHandler     [WEAK]
+  608 00000020                 EXPORT           ADC1_IRQHandler     [WEAK]
+  609 00000020                 EXPORT           Reserved90_IRQHandler     [WEAK
+
+
+
+ARM Macro Assembler    Page 15 
+
+
+]
+  610 00000020                 EXPORT           Reserved91_IRQHandler     [WEAK
+]
+  611 00000020                 EXPORT           Reserved92_IRQHandler     [WEAK
+]
+  612 00000020                 EXPORT           Reserved93_IRQHandler     [WEAK
+]
+  613 00000020                 EXPORT           Reserved94_IRQHandler     [WEAK
+]
+  614 00000020                 EXPORT           Reserved95_IRQHandler     [WEAK
+]
+  615 00000020                 EXPORT           Reserved96_IRQHandler     [WEAK
+]
+  616 00000020                 EXPORT           Reserved97_IRQHandler     [WEAK
+]
+  617 00000020                 EXPORT           Reserved98_IRQHandler     [WEAK
+]
+  618 00000020                 EXPORT           Reserved99_IRQHandler     [WEAK
+]
+  619 00000020                 EXPORT           Reserved100_IRQHandler     [WEA
+K]
+  620 00000020                 EXPORT           Reserved101_IRQHandler     [WEA
+K]
+  621 00000020                 EXPORT           DefaultISR                     
+ [WEAK]
+  622 00000020         
+  623 00000020         DMA0_IRQHandler
+  624 00000020         DMA1_IRQHandler
+  625 00000020         DMA2_IRQHandler
+  626 00000020         DMA3_IRQHandler
+  627 00000020         DMA4_IRQHandler
+  628 00000020         DMA5_IRQHandler
+  629 00000020         DMA6_IRQHandler
+  630 00000020         DMA7_IRQHandler
+  631 00000020         DMA8_IRQHandler
+  632 00000020         DMA9_IRQHandler
+  633 00000020         DMA10_IRQHandler
+  634 00000020         DMA11_IRQHandler
+  635 00000020         DMA12_IRQHandler
+  636 00000020         DMA13_IRQHandler
+  637 00000020         DMA14_IRQHandler
+  638 00000020         DMA15_IRQHandler
+  639 00000020         DMA_Error_IRQHandler
+  640 00000020         MCM_IRQHandler
+  641 00000020         FTF_IRQHandler
+  642 00000020         Read_Collision_IRQHandler
+  643 00000020         LVD_LVW_IRQHandler
+  644 00000020         LLW_IRQHandler
+  645 00000020         Watchdog_IRQHandler
+  646 00000020         RNG_IRQHandler
+  647 00000020         I2C0_IRQHandler
+  648 00000020         I2C1_IRQHandler
+  649 00000020         SPI0_IRQHandler
+  650 00000020         SPI1_IRQHandler
+  651 00000020         I2S0_Tx_IRQHandler
+  652 00000020         I2S0_Rx_IRQHandler
+  653 00000020         LPUART0_IRQHandler
+  654 00000020         UART0_RX_TX_IRQHandler
+  655 00000020         UART0_ERR_IRQHandler
+
+
+
+ARM Macro Assembler    Page 16 
+
+
+  656 00000020         UART1_RX_TX_IRQHandler
+  657 00000020         UART1_ERR_IRQHandler
+  658 00000020         UART2_RX_TX_IRQHandler
+  659 00000020         UART2_ERR_IRQHandler
+  660 00000020         Reserved53_IRQHandler
+  661 00000020         Reserved54_IRQHandler
+  662 00000020         ADC0_IRQHandler
+  663 00000020         CMP0_IRQHandler
+  664 00000020         CMP1_IRQHandler
+  665 00000020         FTM0_IRQHandler
+  666 00000020         FTM1_IRQHandler
+  667 00000020         FTM2_IRQHandler
+  668 00000020         Reserved61_IRQHandler
+  669 00000020         RTC_IRQHandler
+  670 00000020         RTC_Seconds_IRQHandler
+  671 00000020         PIT0_IRQHandler
+  672 00000020         PIT1_IRQHandler
+  673 00000020         PIT2_IRQHandler
+  674 00000020         PIT3_IRQHandler
+  675 00000020         PDB0_IRQHandler
+  676 00000020         USB0_IRQHandler
+  677 00000020         Reserved70_IRQHandler
+  678 00000020         Reserved71_IRQHandler
+  679 00000020         DAC0_IRQHandler
+  680 00000020         MCG_IRQHandler
+  681 00000020         LPTimer_IRQHandler
+  682 00000020         PORTA_IRQHandler
+  683 00000020         PORTB_IRQHandler
+  684 00000020         PORTC_IRQHandler
+  685 00000020         PORTD_IRQHandler
+  686 00000020         PORTE_IRQHandler
+  687 00000020         SWI_IRQHandler
+  688 00000020         Reserved81_IRQHandler
+  689 00000020         Reserved82_IRQHandler
+  690 00000020         Reserved83_IRQHandler
+  691 00000020         Reserved84_IRQHandler
+  692 00000020         Reserved85_IRQHandler
+  693 00000020         Reserved86_IRQHandler
+  694 00000020         FTM3_IRQHandler
+  695 00000020         DAC1_IRQHandler
+  696 00000020         ADC1_IRQHandler
+  697 00000020         Reserved90_IRQHandler
+  698 00000020         Reserved91_IRQHandler
+  699 00000020         Reserved92_IRQHandler
+  700 00000020         Reserved93_IRQHandler
+  701 00000020         Reserved94_IRQHandler
+  702 00000020         Reserved95_IRQHandler
+  703 00000020         Reserved96_IRQHandler
+  704 00000020         Reserved97_IRQHandler
+  705 00000020         Reserved98_IRQHandler
+  706 00000020         Reserved99_IRQHandler
+  707 00000020         Reserved100_IRQHandler
+  708 00000020         Reserved101_IRQHandler
+  709 00000020         DefaultISR
+  710 00000020         
+  711 00000020 E7FE            B                .
+  712 00000022         
+  713 00000022                 ENDP
+  714 00000022         
+
+
+
+ARM Macro Assembler    Page 17 
+
+
+  715 00000022         
+  716 00000022 00 00           ALIGN
+  717 00000024         
+  718 00000024         
+  719 00000024         ; User Initial Stack & Heap
+  720 00000024         
+  721 00000024                 IF               :DEF:__MICROLIB
+  728 00000024         
+  729 00000024                 IMPORT           __use_two_region_memory
+  730 00000024                 EXPORT           __user_initial_stackheap
+  731 00000024         __user_initial_stackheap
+  732 00000024         
+  733 00000024 4805            LDR              R0, =  Heap_Mem
+  734 00000026 4906            LDR              R1, =(Stack_Mem + Stack_Size)
+  735 00000028 4A04            LDR              R2, = (Heap_Mem +  Heap_Size)
+  736 0000002A 4B06            LDR              R3, = Stack_Mem
+  737 0000002C 4770            BX               LR
+  738 0000002E         
+  739 0000002E 00 00           ALIGN
+  740 00000030         
+  741 00000030                 ENDIF
+  742 00000030         
+  743 00000030         
+  744 00000030                 END
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000400 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\startup_mk22f51212.d -o.\objects\startup_mk22f51212.o
+ -I"F:\Kbootloader\Bootloader and Application for K22\Bootloader Source Code\bo
+otloaderMDK1211\Keil\RTE" -IC:\Keil_v5\ARM\PACK\Keil\Kinetis_K20_DFP\1.3.0\Devi
+ce\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 5
+15" --predefine="MK22FN512xxx12 SETA 1" --list=.\listings\startup_mk22f51212.ls
+t ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STACK 00000000
+
+Symbol: STACK
+   Definitions
+      At line 21 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: STACK unused
+Stack_Mem 00000000
+
+Symbol: Stack_Mem
+   Definitions
+      At line 22 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 734 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 736 in file ..\Startup_Code\startup_MK22F51212.S
+
+__initial_sp 00000400
+
+Symbol: __initial_sp
+   Definitions
+      At line 23 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 49 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: __initial_sp used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HEAP 00000000
+
+Symbol: HEAP
+   Definitions
+      At line 32 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: HEAP unused
+Heap_Mem 00000000
+
+Symbol: Heap_Mem
+   Definitions
+      At line 34 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 733 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 735 in file ..\Startup_Code\startup_MK22F51212.S
+
+__heap_base 00000000
+
+Symbol: __heap_base
+   Definitions
+      At line 33 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: __heap_base unused
+__heap_limit 00000000
+
+Symbol: __heap_limit
+   Definitions
+      At line 35 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: __heap_limit unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 44 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 49 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 45 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 309 in file ..\Startup_Code\startup_MK22F51212.S
+
+__Vectors_End 00000400
+
+Symbol: __Vectors_End
+   Definitions
+      At line 307 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 46 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 309 in file ..\Startup_Code\startup_MK22F51212.S
+
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.ARM.__at_0x400 00000000
+
+Symbol: .ARM.__at_0x400
+   Definitions
+      At line 457 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: .ARM.__at_0x400 unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 464 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: .text unused
+ADC0_IRQHandler 00000020
+
+Symbol: ADC0_IRQHandler
+   Definitions
+      At line 662 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 106 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 574 in file ..\Startup_Code\startup_MK22F51212.S
+
+ADC1_IRQHandler 00000020
+
+Symbol: ADC1_IRQHandler
+   Definitions
+      At line 696 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 140 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 608 in file ..\Startup_Code\startup_MK22F51212.S
+
+BusFault_Handler 00000014
+
+Symbol: BusFault_Handler
+   Definitions
+      At line 507 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 54 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 508 in file ..\Startup_Code\startup_MK22F51212.S
+
+CMP0_IRQHandler 00000020
+
+Symbol: CMP0_IRQHandler
+   Definitions
+      At line 663 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 107 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 575 in file ..\Startup_Code\startup_MK22F51212.S
+
+CMP1_IRQHandler 00000020
+
+Symbol: CMP1_IRQHandler
+   Definitions
+      At line 664 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 108 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 576 in file ..\Startup_Code\startup_MK22F51212.S
+
+DAC0_IRQHandler 00000020
+
+Symbol: DAC0_IRQHandler
+   Definitions
+      At line 679 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 123 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 591 in file ..\Startup_Code\startup_MK22F51212.S
+
+DAC1_IRQHandler 00000020
+
+Symbol: DAC1_IRQHandler
+   Definitions
+      At line 695 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 139 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 607 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA0_IRQHandler 00000020
+
+Symbol: DMA0_IRQHandler
+   Definitions
+      At line 623 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 67 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 535 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA10_IRQHandler 00000020
+
+Symbol: DMA10_IRQHandler
+   Definitions
+      At line 633 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 77 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 545 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA11_IRQHandler 00000020
+
+Symbol: DMA11_IRQHandler
+   Definitions
+      At line 634 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 78 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 546 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA12_IRQHandler 00000020
+
+Symbol: DMA12_IRQHandler
+   Definitions
+      At line 635 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 79 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 547 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA13_IRQHandler 00000020
+
+Symbol: DMA13_IRQHandler
+   Definitions
+      At line 636 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 80 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 548 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA14_IRQHandler 00000020
+
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: DMA14_IRQHandler
+   Definitions
+      At line 637 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 81 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 549 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA15_IRQHandler 00000020
+
+Symbol: DMA15_IRQHandler
+   Definitions
+      At line 638 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 82 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 550 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA1_IRQHandler 00000020
+
+Symbol: DMA1_IRQHandler
+   Definitions
+      At line 624 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 68 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 536 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA2_IRQHandler 00000020
+
+Symbol: DMA2_IRQHandler
+   Definitions
+      At line 625 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 69 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 537 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA3_IRQHandler 00000020
+
+Symbol: DMA3_IRQHandler
+   Definitions
+      At line 626 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 70 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 538 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA4_IRQHandler 00000020
+
+Symbol: DMA4_IRQHandler
+   Definitions
+      At line 627 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 71 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 539 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA5_IRQHandler 00000020
+
+Symbol: DMA5_IRQHandler
+   Definitions
+      At line 628 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 72 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 540 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA6_IRQHandler 00000020
+
+Symbol: DMA6_IRQHandler
+   Definitions
+      At line 629 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 73 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 541 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA7_IRQHandler 00000020
+
+Symbol: DMA7_IRQHandler
+   Definitions
+      At line 630 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 74 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 542 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA8_IRQHandler 00000020
+
+Symbol: DMA8_IRQHandler
+   Definitions
+      At line 631 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 75 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 543 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA9_IRQHandler 00000020
+
+Symbol: DMA9_IRQHandler
+   Definitions
+      At line 632 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 76 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 544 in file ..\Startup_Code\startup_MK22F51212.S
+
+DMA_Error_IRQHandler 00000020
+
+Symbol: DMA_Error_IRQHandler
+   Definitions
+      At line 639 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 83 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 551 in file ..\Startup_Code\startup_MK22F51212.S
+
+DebugMon_Handler 0000001A
+
+Symbol: DebugMon_Handler
+   Definitions
+      At line 521 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 61 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 522 in file ..\Startup_Code\startup_MK22F51212.S
+
+DefaultISR 00000020
+
+Symbol: DefaultISR
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 709 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 153 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 154 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 155 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 156 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 157 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 158 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 159 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 160 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 161 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 162 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 163 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 164 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 165 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 166 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 167 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 168 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 169 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 170 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 171 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 172 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 173 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 174 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 175 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 176 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 177 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 178 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 179 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 180 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 181 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 182 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 183 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 184 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 185 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 186 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 187 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 188 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 189 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 190 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 191 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 192 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 193 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 194 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 195 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 196 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 197 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 198 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 199 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 200 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 201 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 202 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 203 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 204 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 205 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 206 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 207 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 208 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 209 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 210 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 211 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 212 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 213 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 214 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 215 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 216 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 217 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 218 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 219 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 220 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 221 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 222 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 223 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 224 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 225 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 226 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 227 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 228 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 229 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 230 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 231 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 232 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 233 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 234 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 235 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 236 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 237 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 238 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 239 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 240 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 241 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 242 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 243 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 244 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 245 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 246 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 247 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 248 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 249 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 250 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 251 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 252 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 253 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 254 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 255 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 256 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 257 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 258 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 259 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 260 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 261 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 262 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 263 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 264 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 265 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 266 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 267 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 7 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 268 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 269 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 270 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 271 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 272 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 273 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 274 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 275 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 276 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 277 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 278 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 279 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 280 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 281 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 282 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 283 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 284 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 285 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 286 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 287 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 288 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 289 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 290 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 291 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 292 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 293 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 294 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 295 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 296 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 297 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 298 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 299 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 300 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 301 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 302 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 303 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 304 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 305 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 306 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 621 in file ..\Startup_Code\startup_MK22F51212.S
+
+Default_Handler 00000020
+
+Symbol: Default_Handler
+   Definitions
+      At line 534 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: Default_Handler unused
+FTF_IRQHandler 00000020
+
+Symbol: FTF_IRQHandler
+   Definitions
+      At line 641 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 85 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 553 in file ..\Startup_Code\startup_MK22F51212.S
+
+FTM0_IRQHandler 00000020
+
+
+
+ARM Macro Assembler    Page 8 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: FTM0_IRQHandler
+   Definitions
+      At line 665 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 109 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 577 in file ..\Startup_Code\startup_MK22F51212.S
+
+FTM1_IRQHandler 00000020
+
+Symbol: FTM1_IRQHandler
+   Definitions
+      At line 666 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 110 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 578 in file ..\Startup_Code\startup_MK22F51212.S
+
+FTM2_IRQHandler 00000020
+
+Symbol: FTM2_IRQHandler
+   Definitions
+      At line 667 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 111 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 579 in file ..\Startup_Code\startup_MK22F51212.S
+
+FTM3_IRQHandler 00000020
+
+Symbol: FTM3_IRQHandler
+   Definitions
+      At line 694 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 138 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 606 in file ..\Startup_Code\startup_MK22F51212.S
+
+HardFault_Handler 00000010
+
+Symbol: HardFault_Handler
+   Definitions
+      At line 497 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 52 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 498 in file ..\Startup_Code\startup_MK22F51212.S
+
+I2C0_IRQHandler 00000020
+
+Symbol: I2C0_IRQHandler
+   Definitions
+      At line 647 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 91 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 559 in file ..\Startup_Code\startup_MK22F51212.S
+
+I2C1_IRQHandler 00000020
+
+Symbol: I2C1_IRQHandler
+   Definitions
+      At line 648 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+
+
+
+ARM Macro Assembler    Page 9 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 92 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 560 in file ..\Startup_Code\startup_MK22F51212.S
+
+I2S0_Rx_IRQHandler 00000020
+
+Symbol: I2S0_Rx_IRQHandler
+   Definitions
+      At line 652 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 96 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 564 in file ..\Startup_Code\startup_MK22F51212.S
+
+I2S0_Tx_IRQHandler 00000020
+
+Symbol: I2S0_Tx_IRQHandler
+   Definitions
+      At line 651 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 95 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 563 in file ..\Startup_Code\startup_MK22F51212.S
+
+LLW_IRQHandler 00000020
+
+Symbol: LLW_IRQHandler
+   Definitions
+      At line 644 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 88 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 556 in file ..\Startup_Code\startup_MK22F51212.S
+
+LPTimer_IRQHandler 00000020
+
+Symbol: LPTimer_IRQHandler
+   Definitions
+      At line 681 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 125 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 593 in file ..\Startup_Code\startup_MK22F51212.S
+
+LPUART0_IRQHandler 00000020
+
+Symbol: LPUART0_IRQHandler
+   Definitions
+      At line 653 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 97 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 565 in file ..\Startup_Code\startup_MK22F51212.S
+
+LVD_LVW_IRQHandler 00000020
+
+Symbol: LVD_LVW_IRQHandler
+   Definitions
+      At line 643 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 87 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 555 in file ..\Startup_Code\startup_MK22F51212.S
+
+MCG_IRQHandler 00000020
+
+
+
+
+ARM Macro Assembler    Page 10 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: MCG_IRQHandler
+   Definitions
+      At line 680 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 124 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 592 in file ..\Startup_Code\startup_MK22F51212.S
+
+MCM_IRQHandler 00000020
+
+Symbol: MCM_IRQHandler
+   Definitions
+      At line 640 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 84 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 552 in file ..\Startup_Code\startup_MK22F51212.S
+
+MemManage_Handler 00000012
+
+Symbol: MemManage_Handler
+   Definitions
+      At line 502 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 53 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 503 in file ..\Startup_Code\startup_MK22F51212.S
+
+NMI_Handler 0000000E
+
+Symbol: NMI_Handler
+   Definitions
+      At line 492 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 51 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 493 in file ..\Startup_Code\startup_MK22F51212.S
+
+PDB0_IRQHandler 00000020
+
+Symbol: PDB0_IRQHandler
+   Definitions
+      At line 675 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 119 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 587 in file ..\Startup_Code\startup_MK22F51212.S
+
+PIT0_IRQHandler 00000020
+
+Symbol: PIT0_IRQHandler
+   Definitions
+      At line 671 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 115 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 583 in file ..\Startup_Code\startup_MK22F51212.S
+
+PIT1_IRQHandler 00000020
+
+Symbol: PIT1_IRQHandler
+   Definitions
+      At line 672 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 116 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 11 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 584 in file ..\Startup_Code\startup_MK22F51212.S
+
+PIT2_IRQHandler 00000020
+
+Symbol: PIT2_IRQHandler
+   Definitions
+      At line 673 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 117 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 585 in file ..\Startup_Code\startup_MK22F51212.S
+
+PIT3_IRQHandler 00000020
+
+Symbol: PIT3_IRQHandler
+   Definitions
+      At line 674 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 118 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 586 in file ..\Startup_Code\startup_MK22F51212.S
+
+PORTA_IRQHandler 00000020
+
+Symbol: PORTA_IRQHandler
+   Definitions
+      At line 682 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 126 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 594 in file ..\Startup_Code\startup_MK22F51212.S
+
+PORTB_IRQHandler 00000020
+
+Symbol: PORTB_IRQHandler
+   Definitions
+      At line 683 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 127 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 595 in file ..\Startup_Code\startup_MK22F51212.S
+
+PORTC_IRQHandler 00000020
+
+Symbol: PORTC_IRQHandler
+   Definitions
+      At line 684 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 128 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 596 in file ..\Startup_Code\startup_MK22F51212.S
+
+PORTD_IRQHandler 00000020
+
+Symbol: PORTD_IRQHandler
+   Definitions
+      At line 685 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 129 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 597 in file ..\Startup_Code\startup_MK22F51212.S
+
+PORTE_IRQHandler 00000020
+
+Symbol: PORTE_IRQHandler
+
+
+
+ARM Macro Assembler    Page 12 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 686 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 130 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 598 in file ..\Startup_Code\startup_MK22F51212.S
+
+PendSV_Handler 0000001C
+
+Symbol: PendSV_Handler
+   Definitions
+      At line 525 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 63 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 526 in file ..\Startup_Code\startup_MK22F51212.S
+
+RNG_IRQHandler 00000020
+
+Symbol: RNG_IRQHandler
+   Definitions
+      At line 646 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 90 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 558 in file ..\Startup_Code\startup_MK22F51212.S
+
+RTC_IRQHandler 00000020
+
+Symbol: RTC_IRQHandler
+   Definitions
+      At line 669 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 113 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 581 in file ..\Startup_Code\startup_MK22F51212.S
+
+RTC_Seconds_IRQHandler 00000020
+
+Symbol: RTC_Seconds_IRQHandler
+   Definitions
+      At line 670 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 114 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 582 in file ..\Startup_Code\startup_MK22F51212.S
+
+Read_Collision_IRQHandler 00000020
+
+Symbol: Read_Collision_IRQHandler
+   Definitions
+      At line 642 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 86 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 554 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved100_IRQHandler 00000020
+
+Symbol: Reserved100_IRQHandler
+   Definitions
+      At line 707 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 151 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 619 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 13 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Reserved101_IRQHandler 00000020
+
+Symbol: Reserved101_IRQHandler
+   Definitions
+      At line 708 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 152 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 620 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved53_IRQHandler 00000020
+
+Symbol: Reserved53_IRQHandler
+   Definitions
+      At line 660 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 104 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 572 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved54_IRQHandler 00000020
+
+Symbol: Reserved54_IRQHandler
+   Definitions
+      At line 661 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 105 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 573 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved61_IRQHandler 00000020
+
+Symbol: Reserved61_IRQHandler
+   Definitions
+      At line 668 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 112 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 580 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved70_IRQHandler 00000020
+
+Symbol: Reserved70_IRQHandler
+   Definitions
+      At line 677 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 121 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 589 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved71_IRQHandler 00000020
+
+Symbol: Reserved71_IRQHandler
+   Definitions
+      At line 678 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 122 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 590 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved81_IRQHandler 00000020
+
+Symbol: Reserved81_IRQHandler
+   Definitions
+
+
+
+ARM Macro Assembler    Page 14 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 688 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 132 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 600 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved82_IRQHandler 00000020
+
+Symbol: Reserved82_IRQHandler
+   Definitions
+      At line 689 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 133 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 601 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved83_IRQHandler 00000020
+
+Symbol: Reserved83_IRQHandler
+   Definitions
+      At line 690 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 134 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 602 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved84_IRQHandler 00000020
+
+Symbol: Reserved84_IRQHandler
+   Definitions
+      At line 691 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 135 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 603 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved85_IRQHandler 00000020
+
+Symbol: Reserved85_IRQHandler
+   Definitions
+      At line 692 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 136 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 604 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved86_IRQHandler 00000020
+
+Symbol: Reserved86_IRQHandler
+   Definitions
+      At line 693 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 137 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 605 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved90_IRQHandler 00000020
+
+Symbol: Reserved90_IRQHandler
+   Definitions
+      At line 697 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 141 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 609 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+
+ARM Macro Assembler    Page 15 Alphabetic symbol ordering
+Relocatable symbols
+
+Reserved91_IRQHandler 00000020
+
+Symbol: Reserved91_IRQHandler
+   Definitions
+      At line 698 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 142 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 610 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved92_IRQHandler 00000020
+
+Symbol: Reserved92_IRQHandler
+   Definitions
+      At line 699 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 143 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 611 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved93_IRQHandler 00000020
+
+Symbol: Reserved93_IRQHandler
+   Definitions
+      At line 700 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 144 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 612 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved94_IRQHandler 00000020
+
+Symbol: Reserved94_IRQHandler
+   Definitions
+      At line 701 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 145 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 613 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved95_IRQHandler 00000020
+
+Symbol: Reserved95_IRQHandler
+   Definitions
+      At line 702 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 146 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 614 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved96_IRQHandler 00000020
+
+Symbol: Reserved96_IRQHandler
+   Definitions
+      At line 703 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 147 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 615 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved97_IRQHandler 00000020
+
+Symbol: Reserved97_IRQHandler
+   Definitions
+      At line 704 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 16 Alphabetic symbol ordering
+Relocatable symbols
+
+   Uses
+      At line 148 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 616 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved98_IRQHandler 00000020
+
+Symbol: Reserved98_IRQHandler
+   Definitions
+      At line 705 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 149 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 617 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reserved99_IRQHandler 00000020
+
+Symbol: Reserved99_IRQHandler
+   Definitions
+      At line 706 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 150 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 618 in file ..\Startup_Code\startup_MK22F51212.S
+
+Reset_Handler 00000002
+
+Symbol: Reset_Handler
+   Definitions
+      At line 477 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 50 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 478 in file ..\Startup_Code\startup_MK22F51212.S
+
+SPI0_IRQHandler 00000020
+
+Symbol: SPI0_IRQHandler
+   Definitions
+      At line 649 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 93 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 561 in file ..\Startup_Code\startup_MK22F51212.S
+
+SPI1_IRQHandler 00000020
+
+Symbol: SPI1_IRQHandler
+   Definitions
+      At line 650 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 94 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 562 in file ..\Startup_Code\startup_MK22F51212.S
+
+SVC_Handler 00000018
+
+Symbol: SVC_Handler
+   Definitions
+      At line 516 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 60 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 517 in file ..\Startup_Code\startup_MK22F51212.S
+
+SWI_IRQHandler 00000020
+
+
+
+ARM Macro Assembler    Page 17 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: SWI_IRQHandler
+   Definitions
+      At line 687 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 131 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 599 in file ..\Startup_Code\startup_MK22F51212.S
+
+SysTick_Handler 0000001E
+
+Symbol: SysTick_Handler
+   Definitions
+      At line 529 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 64 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 530 in file ..\Startup_Code\startup_MK22F51212.S
+
+UART0_ERR_IRQHandler 00000020
+
+Symbol: UART0_ERR_IRQHandler
+   Definitions
+      At line 655 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 99 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 567 in file ..\Startup_Code\startup_MK22F51212.S
+
+UART0_RX_TX_IRQHandler 00000020
+
+Symbol: UART0_RX_TX_IRQHandler
+   Definitions
+      At line 654 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 98 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 566 in file ..\Startup_Code\startup_MK22F51212.S
+
+UART1_ERR_IRQHandler 00000020
+
+Symbol: UART1_ERR_IRQHandler
+   Definitions
+      At line 657 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 101 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 569 in file ..\Startup_Code\startup_MK22F51212.S
+
+UART1_RX_TX_IRQHandler 00000020
+
+Symbol: UART1_RX_TX_IRQHandler
+   Definitions
+      At line 656 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 100 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 568 in file ..\Startup_Code\startup_MK22F51212.S
+
+UART2_ERR_IRQHandler 00000020
+
+Symbol: UART2_ERR_IRQHandler
+   Definitions
+      At line 659 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+
+
+
+ARM Macro Assembler    Page 18 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 103 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 571 in file ..\Startup_Code\startup_MK22F51212.S
+
+UART2_RX_TX_IRQHandler 00000020
+
+Symbol: UART2_RX_TX_IRQHandler
+   Definitions
+      At line 658 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 102 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 570 in file ..\Startup_Code\startup_MK22F51212.S
+
+USB0_IRQHandler 00000020
+
+Symbol: USB0_IRQHandler
+   Definitions
+      At line 676 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 120 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 588 in file ..\Startup_Code\startup_MK22F51212.S
+
+UsageFault_Handler 00000016
+
+Symbol: UsageFault_Handler
+   Definitions
+      At line 512 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 55 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 513 in file ..\Startup_Code\startup_MK22F51212.S
+
+Watchdog_IRQHandler 00000020
+
+Symbol: Watchdog_IRQHandler
+   Definitions
+      At line 645 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 89 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 557 in file ..\Startup_Code\startup_MK22F51212.S
+
+__user_initial_stackheap 00000024
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 731 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 730 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: __user_initial_stackheap used once
+init_data_bss 00000000
+
+Symbol: init_data_bss
+   Definitions
+      At line 470 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 471 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 483 in file ..\Startup_Code\startup_MK22F51212.S
+
+101 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+BackDoorK0 000000FF
+
+Symbol: BackDoorK0
+   Definitions
+      At line 323 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 458 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK0 used once
+BackDoorK1 000000FF
+
+Symbol: BackDoorK1
+   Definitions
+      At line 324 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 458 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK1 used once
+BackDoorK2 000000FF
+
+Symbol: BackDoorK2
+   Definitions
+      At line 325 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 458 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK2 used once
+BackDoorK3 000000FF
+
+Symbol: BackDoorK3
+   Definitions
+      At line 326 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 458 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK3 used once
+BackDoorK4 000000FF
+
+Symbol: BackDoorK4
+   Definitions
+      At line 327 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 459 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK4 used once
+BackDoorK5 000000FF
+
+Symbol: BackDoorK5
+   Definitions
+      At line 328 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 459 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK5 used once
+BackDoorK6 000000FF
+
+Symbol: BackDoorK6
+   Definitions
+      At line 329 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 459 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK6 used once
+BackDoorK7 000000FF
+
+Symbol: BackDoorK7
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Absolute symbols
+
+   Definitions
+      At line 330 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 459 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: BackDoorK7 used once
+FDPROT 000000FF
+
+Symbol: FDPROT
+   Definitions
+      At line 404 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 461 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FDPROT used once
+FEPROT 000000FF
+
+Symbol: FEPROT
+   Definitions
+      At line 418 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 461 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FEPROT used once
+FOPT 000000FF
+
+Symbol: FOPT
+   Definitions
+      At line 428 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 461 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FOPT used once
+FPROT0 000000FF
+
+Symbol: FPROT0
+   Definitions
+      At line 347 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 460 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FPROT0 used once
+FPROT1 000000FF
+
+Symbol: FPROT1
+   Definitions
+      At line 361 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 460 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FPROT1 used once
+FPROT2 000000FF
+
+Symbol: FPROT2
+   Definitions
+      At line 375 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 460 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FPROT2 used once
+FPROT3 000000FF
+
+Symbol: FPROT3
+   Definitions
+      At line 389 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Absolute symbols
+
+      At line 460 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FPROT3 used once
+FSEC 000000FE
+
+Symbol: FSEC
+   Definitions
+      At line 453 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 461 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: FSEC used once
+Heap_Size 00000000
+
+Symbol: Heap_Size
+   Definitions
+      At line 30 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 34 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 735 in file ..\Startup_Code\startup_MK22F51212.S
+
+Stack_Size 00000400
+
+Symbol: Stack_Size
+   Definitions
+      At line 19 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 22 in file ..\Startup_Code\startup_MK22F51212.S
+      At line 734 in file ..\Startup_Code\startup_MK22F51212.S
+
+__Vectors_Size 00000400
+
+Symbol: __Vectors_Size
+   Definitions
+      At line 309 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 47 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: __Vectors_Size used once
+nFDPROT 00000000
+
+Symbol: nFDPROT
+   Definitions
+      At line 403 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 404 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: nFDPROT used once
+nFEPROT 00000000
+
+Symbol: nFEPROT
+   Definitions
+      At line 417 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 418 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: nFEPROT used once
+nFPROT0 00000000
+
+Symbol: nFPROT0
+   Definitions
+      At line 346 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 347 in file ..\Startup_Code\startup_MK22F51212.S
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Absolute symbols
+
+Comment: nFPROT0 used once
+nFPROT1 00000000
+
+Symbol: nFPROT1
+   Definitions
+      At line 360 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 361 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: nFPROT1 used once
+nFPROT2 00000000
+
+Symbol: nFPROT2
+   Definitions
+      At line 374 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 375 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: nFPROT2 used once
+nFPROT3 00000000
+
+Symbol: nFPROT3
+   Definitions
+      At line 388 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 389 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: nFPROT3 used once
+25 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+SystemInit 00000000
+
+Symbol: SystemInit
+   Definitions
+      At line 479 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 481 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: SystemInit used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 480 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      At line 485 in file ..\Startup_Code\startup_MK22F51212.S
+Comment: __main used once
+__use_two_region_memory 00000000
+
+Symbol: __use_two_region_memory
+   Definitions
+      At line 729 in file ..\Startup_Code\startup_MK22F51212.S
+   Uses
+      None
+Comment: __use_two_region_memory unused
+3 symbols
+479 symbols in table

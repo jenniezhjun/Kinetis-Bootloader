@@ -1,0 +1,668 @@
+Archive member included because of file (symbol)
+
+c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+                              c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o (exit)
+c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+                              c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o) (_global_impure_ptr)
+c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+                              c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o (__libc_init_array)
+c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+                              c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o (memset)
+c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+                              c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+address             0x4               ./Sources/bootloader.o
+CommandObj          0xc               ./Driver/flash/flash_kinetis.o
+sci_buffer          0x96              ./Sources/bootloader.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+ .data          0x00000000        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .group         0x00000000        0x8 ./Sources/bootloader.o
+ .text          0x00000000        0x0 ./Sources/bootloader.o
+ .data          0x00000000        0x0 ./Sources/bootloader.o
+ .bss           0x00000000        0x0 ./Sources/bootloader.o
+ .text.WDG_Disable
+                0x00000000       0x20 ./Sources/bootloader.o
+ .text.WDG_Enable
+                0x00000000       0x20 ./Sources/bootloader.o
+ .rodata.station_number
+                0x00000000        0x1 ./Sources/bootloader.o
+ .cfmconfig     0x00000000       0x10 ./Sources/bootloader.o
+ .data          0x00000000        0x0 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+ .bss           0x00000000        0x0 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .text          0x00000000        0x0 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .data          0x00000000        0x0 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .bss           0x00000000        0x0 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .text.SystemCoreClockUpdate
+                0x00000000      0x170 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .data.SystemCoreClock
+                0x00000000        0x4 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000      0x856 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000       0x16 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000       0x44 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000      0x209 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000       0x3b ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000       0x34 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000       0x26 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000      0xd32 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000       0x78 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00000000     0xeff5 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/rs232/rs232.o
+ .text          0x00000000        0x0 ./Driver/rs232/rs232.o
+ .data          0x00000000        0x0 ./Driver/rs232/rs232.o
+ .bss           0x00000000        0x0 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000      0x856 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x16 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x16 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x44 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000      0x209 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x55 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x3b ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x34 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x26 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000      0xd32 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x78 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000     0xeff5 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000      0x112 ./Driver/rs232/rs232.o
+ .debug_macro   0x00000000       0x1c ./Driver/rs232/rs232.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .group         0x00000000        0x8 ./Driver/flash/flash_kinetis.o
+ .text          0x00000000        0x0 ./Driver/flash/flash_kinetis.o
+ .data          0x00000000        0x0 ./Driver/flash/flash_kinetis.o
+ .bss           0x00000000        0x0 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000      0x856 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x3a ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x16 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x16 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x44 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000      0x209 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x55 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x3b ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x34 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x26 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000      0xd32 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000       0x78 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000     0xeff5 ./Driver/flash/flash_kinetis.o
+ .debug_macro   0x00000000      0x112 ./Driver/flash/flash_kinetis.o
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
+ .eh_frame      0x00000000        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
+ .text          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+ .data          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+ .bss           0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+m_interrupts     0x00000000         0x00000400         xr
+m_flash_config   0x00000400         0x00000010         xr
+m_text           0x00000410         0x0007fbf0         xr
+m_data           0x1fff0000         0x00010000         rw
+m_data_2         0x20000000         0x0000fff8         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+LOAD ./Sources/bootloader.o
+LOAD ./Project_Settings/Startup_Code/startup_MK22F51212.o
+LOAD ./Project_Settings/Startup_Code/system_MK22F51212.o
+LOAD ./Driver/rs232/rs232.o
+LOAD ./Driver/flash/flash_kinetis.o
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libstdc++_s.a
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libm.a
+START GROUP
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu\libgcc.a
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc_s.a
+END GROUP
+START GROUP
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu\libgcc.a
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc_s.a
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a
+END GROUP
+START GROUP
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu\libgcc.a
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libc_s.a
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a
+END GROUP
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
+LOAD c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+                0x00000400                HEAP_SIZE = DEFINED (__heap_size__)?__heap_size__:0x400
+                0x00000400                STACK_SIZE = DEFINED (__stack_size__)?__stack_size__:0x400
+
+.interrupts     0x00000000      0x400
+                0x00000000                __VECTOR_TABLE = .
+                0x00000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x00000000      0x400 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+                0x00000000                __isr_vector
+                0x00000400                . = ALIGN (0x4)
+
+.flash_config   0x00000400       0x10
+                0x00000400                . = ALIGN (0x4)
+ *(.FlashConfig)
+ .FlashConfig   0x00000400       0x10 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+                0x00000410                . = ALIGN (0x4)
+
+.text           0x00000410      0x8f4
+                0x00000410                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000410       0x54 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ .text          0x00000464       0x74 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+                0x00000464                _start
+                0x00000464                _mainCRTStartup
+ .text          0x000004d8       0x30 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+                0x000004d8                Reset_Handler
+                0x00000504                Reserved54_IRQHandler
+                0x00000504                DebugMon_Handler
+                0x00000504                I2C0_IRQHandler
+                0x00000504                HardFault_Handler
+                0x00000504                Reserved86_IRQHandler
+                0x00000504                Reserved85_IRQHandler
+                0x00000504                SysTick_Handler
+                0x00000504                PendSV_Handler
+                0x00000504                NMI_Handler
+                0x00000504                UART0_RX_TX_IRQHandler
+                0x00000504                I2C1_IRQHandler
+                0x00000504                DMA2_IRQHandler
+                0x00000504                Reserved99_IRQHandler
+                0x00000504                PIT0_IRQHandler
+                0x00000504                LLWU_IRQHandler
+                0x00000504                Reserved84_IRQHandler
+                0x00000504                Reserved92_IRQHandler
+                0x00000504                UART2_RX_TX_IRQHandler
+                0x00000504                SWI_IRQHandler
+                0x00000504                ADC0_IRQHandler
+                0x00000504                UsageFault_Handler
+                0x00000504                I2S0_Tx_IRQHandler
+                0x00000504                SPI1_IRQHandler
+                0x00000504                DefaultISR
+                0x00000504                DMA9_IRQHandler
+                0x00000504                DMA14_IRQHandler
+                0x00000504                Reserved82_IRQHandler
+                0x00000504                CMP1_IRQHandler
+                0x00000504                Reserved71_IRQHandler
+                0x00000504                PORTD_IRQHandler
+                0x00000504                PORTB_IRQHandler
+                0x00000504                Reserved70_IRQHandler
+                0x00000504                ADC1_IRQHandler
+                0x00000504                PIT2_IRQHandler
+                0x00000504                I2S0_Rx_IRQHandler
+                0x00000504                Reserved53_IRQHandler
+                0x00000504                DMA5_IRQHandler
+                0x00000504                RTC_IRQHandler
+                0x00000504                PDB0_IRQHandler
+                0x00000504                Reserved96_IRQHandler
+                0x00000504                FTM1_IRQHandler
+                0x00000504                Reserved61_IRQHandler
+                0x00000504                Reserved95_IRQHandler
+                0x00000504                PIT3_IRQHandler
+                0x00000504                RTC_Seconds_IRQHandler
+                0x00000504                MCG_IRQHandler
+                0x00000504                UART2_ERR_IRQHandler
+                0x00000504                DMA11_IRQHandler
+                0x00000504                Read_Collision_IRQHandler
+                0x00000504                Reserved98_IRQHandler
+                0x00000504                DMA7_IRQHandler
+                0x00000504                Reserved101_IRQHandler
+                0x00000504                USB0_IRQHandler
+                0x00000504                WDOG_EWM_IRQHandler
+                0x00000504                MemManage_Handler
+                0x00000504                Reserved90_IRQHandler
+                0x00000504                Reserved83_IRQHandler
+                0x00000504                SVC_Handler
+                0x00000504                DMA13_IRQHandler
+                0x00000504                DMA3_IRQHandler
+                0x00000504                Reserved100_IRQHandler
+                0x00000504                RNG_IRQHandler
+                0x00000504                DMA0_IRQHandler
+                0x00000504                Reserved97_IRQHandler
+                0x00000504                Reserved91_IRQHandler
+                0x00000504                LPUART0_IRQHandler
+                0x00000504                DMA15_IRQHandler
+                0x00000504                DAC0_IRQHandler
+                0x00000504                Reserved81_IRQHandler
+                0x00000504                Reserved94_IRQHandler
+                0x00000504                DMA4_IRQHandler
+                0x00000504                PIT1_IRQHandler
+                0x00000504                UART0_ERR_IRQHandler
+                0x00000504                DMA_Error_IRQHandler
+                0x00000504                LVD_LVW_IRQHandler
+                0x00000504                SPI0_IRQHandler
+                0x00000504                FTM0_IRQHandler
+                0x00000504                PORTA_IRQHandler
+                0x00000504                DAC1_IRQHandler
+                0x00000504                MCM_IRQHandler
+                0x00000504                DMA12_IRQHandler
+                0x00000504                FTM3_IRQHandler
+                0x00000504                PORTE_IRQHandler
+                0x00000504                FTM2_IRQHandler
+                0x00000504                LPTMR0_IRQHandler
+                0x00000504                BusFault_Handler
+                0x00000504                DMA8_IRQHandler
+                0x00000504                Reserved93_IRQHandler
+                0x00000504                DMA10_IRQHandler
+                0x00000504                UART1_ERR_IRQHandler
+                0x00000504                UART1_RX_TX_IRQHandler
+                0x00000504                CMP0_IRQHandler
+                0x00000504                PORTC_IRQHandler
+                0x00000504                DMA6_IRQHandler
+                0x00000504                FTF_IRQHandler
+                0x00000504                DMA1_IRQHandler
+ *(.text*)
+ .text.NVIC_SystemReset
+                0x00000508       0x24 ./Sources/bootloader.o
+ .text.Boot_ReadAddress
+                0x0000052c       0x20 ./Sources/bootloader.o
+ .text.WDG_Refresh
+                0x0000054c       0x14 ./Sources/bootloader.o
+                0x0000054c                WDG_Refresh
+ .text.Boot_Button_Init
+                0x00000560       0x1c ./Sources/bootloader.o
+                0x00000560                Boot_Button_Init
+ .text.Boot_StrCompare
+                0x0000057c       0x1e ./Sources/bootloader.o
+                0x0000057c                Boot_StrCompare
+ .text.JumpToUserApplication
+                0x0000059a       0x14 ./Sources/bootloader.o
+                0x0000059a                JumpToUserApplication
+ .text.Boot_Send
+                0x000005ae       0x26 ./Sources/bootloader.o
+                0x000005ae                Boot_Send
+ .text.Boot_Init_Clock
+                0x000005d4       0xdc ./Sources/bootloader.o
+                0x000005d4                Boot_Init_Clock
+ .text.startup.main
+                0x000006b0      0x40c ./Sources/bootloader.o
+                0x000006b0                main
+ .text.SystemInit
+                0x00000abc       0x38 ./Project_Settings/Startup_Code/system_MK22F51212.o
+                0x00000abc                SystemInit
+ .text.UART_PutChar
+                0x00000af4       0x10 ./Driver/rs232/rs232.o
+                0x00000af4                UART_PutChar
+ .text.UART_GetChar
+                0x00000b04       0x34 ./Driver/rs232/rs232.o
+                0x00000b04                UART_GetChar
+ .text.UART_Initialization
+                0x00000b38       0x28 ./Driver/rs232/rs232.o
+                0x00000b38                UART_Initialization
+ .text.FLASH_FlashCommandSequenceStart
+                0x00000b60       0x48 ./Driver/flash/flash_kinetis.o
+                0x00000b60                FLASH_FlashCommandSequenceStart
+ .text.FLASH_Initialization
+                0x00000ba8       0x20 ./Driver/flash/flash_kinetis.o
+                0x00000ba8                FLASH_Initialization
+ .text.FLASH_ProgramLongWord
+                0x00000bc8       0x1c ./Driver/flash/flash_kinetis.o
+                0x00000bc8                FLASH_ProgramLongWord
+ .text.FLASH_ProgramSectionByLongs
+                0x00000be4       0x26 ./Driver/flash/flash_kinetis.o
+                0x00000be4                FLASH_ProgramSectionByLongs
+ *fill*         0x00000c0a        0x2 
+ .text.FLASH_EraseSector
+                0x00000c0c       0x1c ./Driver/flash/flash_kinetis.o
+                0x00000c0c                FLASH_EraseSector
+ .text.exit     0x00000c28       0x28 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+                0x00000c28                exit
+ .text.__libc_init_array
+                0x00000c50       0x4c c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+                0x00000c50                __libc_init_array
+ .text.memset   0x00000c9c       0x10 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+                0x00000c9c                memset
+ .text._exit    0x00000cac        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+                0x00000cac                _exit
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str_app_ok
+                0x00000cb0        0x8 ./Sources/bootloader.o
+                0x00000cb0                str_app_ok
+ .rodata.str1.1
+                0x00000cb8        0x2 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ *fill*         0x00000cba        0x2 
+ .rodata._global_impure_ptr
+                0x00000cbc        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+                0x00000cbc                _global_impure_ptr
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x00000cc0        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ *(.init)
+ .init          0x00000cc0        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+                0x00000cc0                _init
+ .init          0x00000cc4       0x2c ./Sources/bootloader.o
+                0x00000cc4                MCU_Identification
+ .init          0x00000cf0        0x8 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+ *(.fini)
+ .fini          0x00000cf8        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+                0x00000cf8                _fini
+ .fini          0x00000cfc        0x8 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+                0x00000d04                . = ALIGN (0x4)
+
+.vfp11_veneer   0x00000d04        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00000d04        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00000d04        0x0
+ .iplt          0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x00000d04        0x8
+                0x00000d04                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx     0x00000d04        0x8 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+                0x00000d0c                __exidx_end = .
+
+.rel.dyn        0x00000d0c        0x0
+ .rel.iplt      0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+
+.ctors          0x00000d0c        0x0
+                0x00000d0c                __CTOR_LIST__ = .
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x00000d0c                __CTOR_END__ = .
+
+.dtors          0x00000d0c        0x0
+                0x00000d0c                __DTOR_LIST__ = .
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x00000d0c                __DTOR_END__ = .
+
+.preinit_array  0x00000d0c        0x0
+                0x00000d0c                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x00000d0c                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x00000d0c        0x4
+                0x00000d0c                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+ .init_array    0x00000d0c        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+                0x00000d10                PROVIDE (__init_array_end, .)
+
+.fini_array     0x00000d10        0x4
+                0x00000d10                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x00000d10        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+                0x00000d14                PROVIDE (__fini_array_end, .)
+                0x00000d14                __etext = .
+                0x00000d14                __DATA_ROM = .
+
+.data           0x1fff0000       0x64 load address 0x00000d14
+                0x1fff0000                . = ALIGN (0x4)
+                0x1fff0000                __DATA_RAM = .
+                0x1fff0000                __data_start__ = .
+ *(.data)
+ *(.data*)
+ .data.impure_data
+                0x1fff0000       0x60 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ *(.jcr*)
+ .jcr           0x1fff0060        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ .jcr           0x1fff0060        0x4 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
+                0x1fff0064                . = ALIGN (0x4)
+                0x1fff0064                __data_end__ = .
+                0x00000d78                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+
+.igot.plt       0x1fff0064        0x0 load address 0x00000d78
+ .igot.plt      0x00000000        0x0 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+
+.bss            0x1fff0064      0x18c load address 0x00000d78
+                0x1fff0064                . = ALIGN (0x4)
+                0x1fff0064                __START_BSS = .
+                0x1fff0064                __bss_start__ = .
+ *(.bss)
+ .bss           0x1fff0064       0x1c c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ *(.bss*)
+ .bss.buffer    0x1fff0080       0xc8 ./Driver/flash/flash_kinetis.o
+                0x1fff0080                buffer
+ *(COMMON)
+ COMMON         0x1fff0148       0x9a ./Sources/bootloader.o
+                0x1fff0148                address
+                0x1fff014c                sci_buffer
+ *fill*         0x1fff01e2        0x2 
+ COMMON         0x1fff01e4        0xc ./Driver/flash/flash_kinetis.o
+                0x1fff01e4                CommandObj
+                0x1fff01f0                . = ALIGN (0x4)
+                0x1fff01f0                __bss_end__ = .
+                0x1fff01f0                __END_BSS = .
+
+.heap           0x20000000      0x400
+                0x20000000                . = ALIGN (0x8)
+                0x20000000                __end__ = .
+                0x20000000                PROVIDE (end, .)
+                0x20000000                __HeapBase = .
+                0x20000400                . = (. + HEAP_SIZE)
+ *fill*         0x20000000      0x400 
+                0x20000400                __HeapLimit = .
+
+.stack          0x20000400      0x400
+                0x20000400                . = ALIGN (0x8)
+                0x20000800                . = (. + STACK_SIZE)
+ *fill*         0x20000400      0x400 
+                0x2000fff8                __StackTop = (ORIGIN (m_data_2) + 0xfff8)
+                0x2000fbf8                __StackLimit = (__StackTop - STACK_SIZE)
+                0x2000fff8                PROVIDE (__stack, __StackTop)
+
+.ARM.attributes
+                0x00000000       0x30
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x22 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crti.o
+ .ARM.attributes
+                0x00000022       0x34 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtbegin.o
+ .ARM.attributes
+                0x00000056       0x20 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .ARM.attributes
+                0x00000076       0x39 ./Sources/bootloader.o
+ .ARM.attributes
+                0x000000af       0x1f ./Project_Settings/Startup_Code/startup_MK22F51212.o
+ .ARM.attributes
+                0x000000ce       0x39 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .ARM.attributes
+                0x00000107       0x39 ./Driver/rs232/rs232.o
+ .ARM.attributes
+                0x00000140       0x39 ./Driver/flash/flash_kinetis.o
+ .ARM.attributes
+                0x00000179       0x34 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000001ad       0x34 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000001e1       0x34 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000215       0x34 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000249       0x34 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000027d       0x34 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtend.o
+ .ARM.attributes
+                0x000002b1       0x22 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/armv7e-m/fpu/crtn.o
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region m_data_2 overflowed with stack and heap)
+OUTPUT(bootloader_frdm-k22_kds.elf elf32-littlearm)
+
+.debug_info     0x00000000     0x2021
+ .debug_info    0x00000000      0xff9 ./Sources/bootloader.o
+ .debug_info    0x00000ff9       0xd4 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+ .debug_info    0x000010cd      0x5ed ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_info    0x000016ba      0x3c8 ./Driver/rs232/rs232.o
+ .debug_info    0x00001a82      0x59f ./Driver/flash/flash_kinetis.o
+
+.debug_abbrev   0x00000000      0x6fc
+ .debug_abbrev  0x00000000      0x312 ./Sources/bootloader.o
+ .debug_abbrev  0x00000312       0x14 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+ .debug_abbrev  0x00000326      0x11a ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_abbrev  0x00000440      0x145 ./Driver/rs232/rs232.o
+ .debug_abbrev  0x00000585      0x177 ./Driver/flash/flash_kinetis.o
+
+.debug_loc      0x00000000      0x6b8
+ .debug_loc     0x00000000      0x47e ./Sources/bootloader.o
+ .debug_loc     0x0000047e       0x9b ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_loc     0x00000519       0x2b ./Driver/rs232/rs232.o
+ .debug_loc     0x00000544      0x174 ./Driver/flash/flash_kinetis.o
+
+.debug_aranges  0x00000000      0x128
+ .debug_aranges
+                0x00000000       0x70 ./Sources/bootloader.o
+ .debug_aranges
+                0x00000070       0x20 ./Project_Settings/Startup_Code/startup_MK22F51212.o
+ .debug_aranges
+                0x00000090       0x28 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_aranges
+                0x000000b8       0x30 ./Driver/rs232/rs232.o
+ .debug_aranges
+                0x000000e8       0x40 ./Driver/flash/flash_kinetis.o
+
+.debug_ranges   0x00000000       0xc8
+ .debug_ranges  0x00000000       0x60 ./Sources/bootloader.o
+ .debug_ranges  0x00000060       0x18 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_ranges  0x00000078       0x20 ./Driver/rs232/rs232.o
+ .debug_ranges  0x00000098       0x30 ./Driver/flash/flash_kinetis.o
+
+.debug_macro    0x00000000    0x10e0f
+ .debug_macro   0x00000000       0xdc ./Sources/bootloader.o
+ .debug_macro   0x000000dc      0x856 ./Sources/bootloader.o
+ .debug_macro   0x00000932       0x16 ./Sources/bootloader.o
+ .debug_macro   0x00000948       0x16 ./Sources/bootloader.o
+ .debug_macro   0x0000095e       0x44 ./Sources/bootloader.o
+ .debug_macro   0x000009a2      0x209 ./Sources/bootloader.o
+ .debug_macro   0x00000bab       0x55 ./Sources/bootloader.o
+ .debug_macro   0x00000c00       0x3b ./Sources/bootloader.o
+ .debug_macro   0x00000c3b       0x34 ./Sources/bootloader.o
+ .debug_macro   0x00000c6f       0x26 ./Sources/bootloader.o
+ .debug_macro   0x00000c95      0xd32 ./Sources/bootloader.o
+ .debug_macro   0x000019c7       0x78 ./Sources/bootloader.o
+ .debug_macro   0x00001a3f     0xeff5 ./Sources/bootloader.o
+ .debug_macro   0x00010a34       0x1c ./Sources/bootloader.o
+ .debug_macro   0x00010a50       0x3a ./Sources/bootloader.o
+ .debug_macro   0x00010a8a      0x112 ./Sources/bootloader.o
+ .debug_macro   0x00010b9c       0x88 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00010c24       0x67 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_macro   0x00010c8b       0xc1 ./Driver/rs232/rs232.o
+ .debug_macro   0x00010d4c       0xc3 ./Driver/flash/flash_kinetis.o
+
+.debug_line     0x00000000      0xc7f
+ .debug_line    0x00000000      0x45a ./Sources/bootloader.o
+ .debug_line    0x0000045a       0x7b ./Project_Settings/Startup_Code/startup_MK22F51212.o
+ .debug_line    0x000004d5      0x26f ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_line    0x00000744      0x276 ./Driver/rs232/rs232.o
+ .debug_line    0x000009ba      0x2c5 ./Driver/flash/flash_kinetis.o
+
+.debug_str      0x00000000    0x5fbc5
+ .debug_str     0x00000000    0x5f8c4 ./Sources/bootloader.o
+                              0x5fa67 (size before relaxing)
+ .debug_str     0x0005f8c4       0x7a ./Project_Settings/Startup_Code/system_MK22F51212.o
+                              0x5ed99 (size before relaxing)
+ .debug_str     0x0005f93e       0x2d ./Driver/rs232/rs232.o
+                              0x5f4db (size before relaxing)
+ .debug_str     0x0005f96b      0x25a ./Driver/flash/flash_kinetis.o
+                              0x5f634 (size before relaxing)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 ./Sources/bootloader.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .comment       0x00000000       0x71 ./Driver/rs232/rs232.o
+ .comment       0x00000000       0x71 ./Driver/flash/flash_kinetis.o
+
+.debug_frame    0x00000000      0x290
+ .debug_frame   0x00000000       0xf8 ./Sources/bootloader.o
+ .debug_frame   0x000000f8       0x30 ./Project_Settings/Startup_Code/system_MK22F51212.o
+ .debug_frame   0x00000128       0x54 ./Driver/rs232/rs232.o
+ .debug_frame   0x0000017c       0x80 ./Driver/flash/flash_kinetis.o
+ .debug_frame   0x000001fc       0x28 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-exit.o)
+ .debug_frame   0x00000224       0x2c c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-init.o)
+ .debug_frame   0x00000250       0x20 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libg_s.a(lib_a-memset.o)
+ .debug_frame   0x00000270       0x20 c:/freescale/kds_3.0.0/toolchain/bin/../lib/gcc/arm-none-eabi/4.8.4/../../../../arm-none-eabi/lib/armv7e-m/fpu\libnosys.a(_exit.o)

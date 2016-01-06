@@ -44,29 +44,29 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-k22_led_app.hex \
+user_app_red_blink_k22.srec \
 
 
 # All Target
-all: k22_led_app.elf secondary-outputs
+all: user_app_red_blink_k22.elf secondary-outputs
 
 # Tool invocations
-k22_led_app.elf: $(OBJS) $(USER_OBJS)
+user_app_red_blink_k22.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM C++ Linker'
-	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "MK22FN512xxx12_flash.ld" -Xlinker --gc-sections -L"C:/Users/b51432/workspace1118.kds/user_app_red_blink_k22/Project_Settings/Linker_Files" -Wl,-Map,"k22_led_app.map" -specs=nano.specs -specs=nosys.specs -o "k22_led_app.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "MK22FN512xxx12_flash.ld" -Xlinker --gc-sections -L"C:/Users/b51432/workspace1124.kds/user_app_red_blink_k22/Project_Settings/Linker_Files" -Wl,-Map,"user_app_red_blink_k22.map" -specs=nano.specs -specs=nosys.specs -o "user_app_red_blink_k22.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-k22_led_app.hex: k22_led_app.elf
+user_app_red_blink_k22.srec: user_app_red_blink_k22.elf
 	@echo 'Invoking: Cross ARM GNU Create Flash Image'
-	arm-none-eabi-objcopy -O ihex "k22_led_app.elf"  "k22_led_app.hex"
+	arm-none-eabi-objcopy -O srec "user_app_red_blink_k22.elf"  "user_app_red_blink_k22.srec"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(C++_DEPS)$(OBJS)$(C_DEPS)$(ASM_DEPS)$(CC_DEPS)$(SECONDARY_FLASH)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)$(S_UPPER_DEPS) k22_led_app.elf
+	-$(RM) $(C++_DEPS)$(OBJS)$(C_DEPS)$(ASM_DEPS)$(CC_DEPS)$(SECONDARY_FLASH)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)$(S_UPPER_DEPS) user_app_red_blink_k22.elf
 	-@echo ' '
 
 secondary-outputs: $(SECONDARY_FLASH)

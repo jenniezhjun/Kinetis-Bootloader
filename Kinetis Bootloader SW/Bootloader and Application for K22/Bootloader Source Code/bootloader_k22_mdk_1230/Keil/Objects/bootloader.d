@@ -1,0 +1,17 @@
+.\objects\bootloader.o: ..\Sources\bootloader.c
+.\objects\bootloader.o: ..\Common\MK22F51212.h
+.\objects\bootloader.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\bootloader.o: ..\Common\core_cm4.h
+.\objects\bootloader.o: ..\Common\core_cmInstr.h
+.\objects\bootloader.o: ..\Common\core_cmFunc.h
+.\objects\bootloader.o: ..\Common\core_cmSimd.h
+.\objects\bootloader.o: ..\Common\system_MK22F51212.h
+.\objects\bootloader.o: ..\Common\core_cm4.h
+.\objects\bootloader.o: ..\Sources\bootloader.h
+.\objects\bootloader.o: ..\Driver\rs232\rs232.h
+.\objects\bootloader.o: ..\Sources\bootloader.h
+.\objects\bootloader.o: ..\Driver\flash\flash_kinetis.h
+.\objects\bootloader.o: ..\Sources\bootloader.h
+.\objects\bootloader.o: ..\Driver\bootcfg\FRDM_K22F_cfg.h
+.\objects\bootloader.o: ..\Common\MK22F51212.h
+.\objects\bootloader.o: ..\Common\core_cm4.h

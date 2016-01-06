@@ -22,13 +22,13 @@ __stack_size = 0x400; 				/* required amount of stack */
 /* Specify the memory areas */
 MEMORY
 {
-/*  m_interrupts	(rx) : ORIGIN = 0x00000000, LENGTH = 0xC0 */
-/*  m_cfmprotrom 	(rx) : ORIGIN = 0x00000400, LENGTH = 0x10 */
-/*  m_text 		(rx) : ORIGIN = 0x00000800, LENGTH = 128K - 0x800 */
-/*  m_data 	   (rwx) : ORIGIN = 0x1FFFF000, LENGTH = 16K	*/	/* SRAM */
-  m_interrupts	(rx) : ORIGIN = 0x00001000, LENGTH = 0xC0                    /* revised for bootloader */
+ /* m_interrupts	(rx) : ORIGIN = 0x00000000, LENGTH = 0xC0 */ 
+ /* m_cfmprotrom 	(rx) : ORIGIN = 0x00000400, LENGTH = 0x10 */ 
+/* m_text 		(rx) : ORIGIN = 0x00000800, LENGTH = 128K - 0x800 */ 
+ /* m_data 	   (rwx) : ORIGIN = 0x1FFFF000, LENGTH = 16K	*/ 	/* SRAM */
+  m_interrupts	(rx) : ORIGIN = 0x00001000, LENGTH = 0xC0                 /* revised for bootloader */
   m_text 		(rx) : ORIGIN = 0x000010C0, LENGTH = 128K - 0x10C0           /* revised for bootloader */
-  m_data 	   (rwx) : ORIGIN = 0x1FFFF000, LENGTH = 16K - 8                 /* revised for bootloader */
+   m_data 	   (rwx) : ORIGIN = 0x1FFFF000, LENGTH = 16K - 8                /* revised for bootloader */
 }
 
 		

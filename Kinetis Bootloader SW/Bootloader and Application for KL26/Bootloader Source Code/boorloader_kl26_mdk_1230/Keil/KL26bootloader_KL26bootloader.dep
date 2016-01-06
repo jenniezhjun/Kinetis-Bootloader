@@ -1,0 +1,53 @@
+Dependencies for Project 'KL26bootloader', Target 'KL26bootloader': (DO NOT MODIFY !)
+F (..\Common\core_cm0plus.h)(0x56270E24)()
+F (..\Common\core_cm4.h)(0x5617C8C2)()
+F (..\Common\core_cm4_simd.h)(0x5617C8C2)()
+F (..\Common\core_cm7.h)(0x5617C8C2)()
+F (..\Common\core_cmFunc.h)(0x56271B68)()
+F (..\Common\core_cmInstr.h)(0x56271B4E)()
+F (..\Common\core_cmSimd.h)(0x5617C8C2)()
+F (..\Common\MKL26Z4.h)(0x56270E02)()
+F (..\Common\system_MKL26Z4.h)(0x56271B8E)()
+F (..\Common\bootloader_asm.s)(0x562757E6)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Freescale\Kinetis--list .\listings\bootloader_asm.lst --xref -o .\objects\bootloader_asm.o --depend .\objects\bootloader_asm.d)
+F (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56558C70)()
+F (..\Driver\flash\flash_kinetis.c)(0x56271B68)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Freescale\Kinetis-o .\objects\flash_kinetis.o --omf_browse .\objects\flash_kinetis.crf --depend .\objects\flash_kinetis.d)
+I (..\Driver\flash\flash_kinetis.h)(0x56271B78)
+I (..\Sources\bootloader.h)(0x562754A2)
+I (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56558C70)
+I (..\Common\MKL26Z4.h)(0x56270E02)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Common\core_cm0plus.h)(0x56270E24)
+I (..\Common\core_cmInstr.h)(0x56271B4E)
+I (..\Common\core_cmFunc.h)(0x56271B68)
+I (..\Common\system_MKL26Z4.h)(0x56271B8E)
+F (..\Driver\flash\flash_kinetis.h)(0x56271B78)()
+F (..\Driver\rs232\rs232.c)(0x56271B68)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Freescale\Kinetis-o .\objects\rs232.o --omf_browse .\objects\rs232.crf --depend .\objects\rs232.d)
+I (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56558C70)
+I (..\Common\MKL26Z4.h)(0x56270E02)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Common\core_cm0plus.h)(0x56270E24)
+I (..\Common\core_cmInstr.h)(0x56271B4E)
+I (..\Common\core_cmFunc.h)(0x56271B68)
+I (..\Common\system_MKL26Z4.h)(0x56271B8E)
+I (..\Driver\rs232\rs232.h)(0x56271BA8)
+F (..\Driver\rs232\rs232.h)(0x56271BA8)()
+F (..\Sources\bootloader.c)(0x5656ADDE)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Freescale\Kinetis-o .\objects\bootloader.o --omf_browse .\objects\bootloader.crf --depend .\objects\bootloader.d)
+I (..\Common\MKL26Z4.h)(0x56270E02)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Common\core_cm0plus.h)(0x56270E24)
+I (..\Common\core_cmInstr.h)(0x56271B4E)
+I (..\Common\core_cmFunc.h)(0x56271B68)
+I (..\Common\system_MKL26Z4.h)(0x56271B8E)
+I (..\Sources\bootloader.h)(0x562754A2)
+I (..\Driver\rs232\rs232.h)(0x56271BA8)
+I (..\Driver\bootcfg\FRDM_KL26Z_cfg.h)(0x56558C70)
+I (..\Driver\flash\flash_kinetis.h)(0x56271B78)
+F (..\Sources\bootloader.h)(0x562754A2)()
+F (..\Startup_Code\startup_MKL26Z4.S)(0x562752E8)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Freescale\Kinetis--list .\listings\startup_mkl26z4.lst --xref -o .\objects\startup_mkl26z4.o --depend .\objects\startup_mkl26z4.d)
+F (..\Startup_Code\system_MKL26Z4.c)(0x56270DAE)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Common -I..\Driver\bootcfg -I..\Driver\flash -I..\Driver\rs232 -I..\Sources -I..\Startup_Code -I..\..\boorloaderMDK -I..\Driver-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Freescale\Kinetis-o .\objects\system_mkl26z4.o --omf_browse .\objects\system_mkl26z4.crf --depend .\objects\system_mkl26z4.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7C554)
+I (..\Common\MKL26Z4.h)(0x56270E02)
+I (..\Common\core_cm0plus.h)(0x56270E24)
+I (..\Common\core_cmInstr.h)(0x56271B4E)
+I (..\Common\core_cmFunc.h)(0x56271B68)
+I (..\Common\system_MKL26Z4.h)(0x56271B8E)
