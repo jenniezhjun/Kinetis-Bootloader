@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3342168944</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\..\Common\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\..\Common\core_cm4.h</file>
+      <file>$PROJ_DIR$\..\Common\core_cmInstr.h</file>
+      <file>$PROJ_DIR$\..\Common\core_cmSimd.h</file>
+      <file>$PROJ_DIR$\..\Common\MK22F51212.h</file>
+      <file>$PROJ_DIR$\..\Common\system_MK22F51212.h</file>
+      <file>$PROJ_DIR$\..\Sources\bl_communication.c</file>
+      <file>$PROJ_DIR$\..\Sources\bl_communication.h</file>
+      <file>$PROJ_DIR$\..\Sources\main.c</file>
+      <file>$PROJ_DIR$\..\Startup_Code\startup_MK22F51212.S</file>
+      <file>$PROJ_DIR$\..\Startup_Code\system_MK22F51212.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\user_app_red_k22_IAR.out</file>
+      <file>$PROJ_DIR$\..\MK22xX512_12.icf</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_MK22F51212.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bl_communication.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_MK22F51212.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\user_app_red_k22_IAR.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bl_communication.pbi</file>
+      <file>$PROJ_DIR$\Debug\Exe\user_app_red_k22_IAR.srec</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_MK22F51212.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\bl_communication.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_MK22F51212.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 11</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Sources\bl_communication.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 15</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 4 31 25 35 27 14 32 34 37 1 2 28 20 0 3 5 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27 31 5 32 3 7 1 35 34 14 25 2 20 4 37 0 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Sources\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 30</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 38</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 4 31 25 35 27 14 32 34 37 1 2 28 20 0 3 5 7</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27 32 31 5 3 7 1 25 34 14 2 20 4 35 37 0 28</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Startup_Code\startup_MK22F51212.S</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 33</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\Startup_Code\system_MK22F51212.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 17</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31 25 35 27 14 32 34 37 4 1 2 28 20 0 3 5</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5 31 35 14 34 25 28 27 32 0 4 37 1 2 3 20</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\user_app_red_k22_IAR.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 22</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 12 26 30 33 13 18 16 29 24</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
