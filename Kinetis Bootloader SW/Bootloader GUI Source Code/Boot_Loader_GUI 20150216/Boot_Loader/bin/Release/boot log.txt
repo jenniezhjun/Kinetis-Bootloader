@@ -1,0 +1,7 @@
+======================================================================
+Current time is 2/17/2016 5:38:55 PM
+The s19 file is: C:\Users\b08277\Desktop\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00010000- 0x000107F0
+Success!

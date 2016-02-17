@@ -1,0 +1,239 @@
+======================================================================
+Current time is 12/30/2015 10:48:12
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.bin
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B05
+Success!
+======================================================================
+Current time is 12/30/2015 10:49:21
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.bin
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B05
+Success!
+======================================================================
+Current time is 12/30/2015 10:50:11
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.bin
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B05
+Success!
+======================================================================
+Current time is 12/30/2015 10:51:00
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:51:23
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_red_blink.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002A84
+Success!
+======================================================================
+Current time is 12/30/2015 10:52:15
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:52:48
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:54:39
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:55:35
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:56:11
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:58:43
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 12/30/2015 10:59:13
+The s19 file is: F:\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 1/12/2016 22:56:54
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 1/12/2016 22:57:54
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 1/12/2016 23:00:21
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 1/12/2016 23:02:42
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 1/12/2016 23:03:18
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+Terminated!
+======================================================================
+Current time is 1/12/2016 23:05:44
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 1/13/2016 0:22:43
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 1/13/2016 0:28:46
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 1/13/2016 0:31:45
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for KL26\User Application Source Code\user_app_green_blink.s19
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00002B08
+Success!
+======================================================================
+Current time is 1/13/2016 11:53:38
+The s19 file is: C:\Users\B55335\Desktop\bootloaderKL27\app\Keil\Objects\greenAPP.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00001548
+Success!
+======================================================================
+Current time is 1/13/2016 11:53:44
+The s19 file is: C:\Users\B55335\Desktop\bootloaderKL27\app\Keil\Objects\greenAPP.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00001000- 0x00001548
+Success!
+======================================================================
+Current time is 2/15/2016 11:36:56
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for K22\User Application Source Code\user_app_green_k22_IAR0215\IAR\Debug\Exe\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 2/15/2016 11:37:20
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for K22\User Application Source Code\user_app_green_k22_IAR0215\IAR\Debug\Exe\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00010000- 0x000107F0
+Success!
+======================================================================
+Current time is 2/15/2016 11:37:27
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for K22\User Application Source Code\user_app_green_k22_IAR0215\IAR\Debug\Exe\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00010000- 0x000107F0
+Success!
+======================================================================
+Current time is 2/15/2016 11:57:02
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for K22\User Application Source Code\user_app_green_k22_IAR0215\IAR\Debug\Exe\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00010000- 0x000107F0
+Success!
+======================================================================
+Current time is 2/16/2016 18:04:48
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for K22\User Application Source Code\user_app_green_blink_k22\Debug\k22_led_green_app.hex
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 2/16/2016 18:05:00
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for K22\User Application Source Code\user_app_green_blink_k22\Debug\k22_led_green_app.hex
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 2/16/2016 18:07:44
+The s19 file is: C:\Users\B55335\Desktop\boot0106\Kbootloader\Bootloader and Application for K22\User Application Source Code\user_app_green_blink_k22\Debug\k22_led_green_app.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00004000- 0x00014960
+Success!
+======================================================================
+Current time is 2/17/2016 4:22:51 PM
+The s19 file is: C:\Users\b08277\Desktop\k22_led_green_app.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00004000- 0x00014960
+Success!
+======================================================================
+Current time is 2/17/2016 4:23:51 PM
+The s19 file is: C:\Users\b08277\Desktop\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 2/17/2016 4:24:27 PM
+The s19 file is: C:\Users\b08277\Desktop\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Error 1 times!
+Error 2 times!
+Error 3 times!
+======================================================================
+Current time is 2/17/2016 4:34:57 PM
+The s19 file is: C:\Users\b08277\Desktop\user_app_green_k22_IAR.hex
+Station 1 is trying to enter Boot mode 
+Programming Station 1
+prg_area: 0x00010000- 0x000107F0
+Success!
